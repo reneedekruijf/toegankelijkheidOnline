@@ -1,0 +1,116 @@
+doctype html
+html(lang="nl")
+    block head
+        head
+            meta(charset="utf-8") 
+            meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0, user-scalable=yes") 
+            meta(name="robots" content="all") 
+            meta(name="copyright" content="Copyright Webdesignpuntnl Culemborg") 
+
+            meta(name="image" content="https://www.webdesignpuntnl.com/site-image.jpg")
+            meta(name="description" property="og:description" content=description)
+            meta(name="name" content=title)
+            meta(name="author" content="Renee de Kruijf")
+
+            //- link(rel="apple-touch-icon" sizes="180x180" href=`${path}apple-touch-icon.png`)
+            //- link(rel="icon" type="image/png" sizes="32x32" href=`${path}favicon-32x32.png`)
+            //- link(rel="icon" type="image/png" sizes="16x16" href=`${path}favicon-16x16.png`)
+            //- link(rel="manifest" href=`${path}site.webmanifest`)
+            //- link(rel="mask-icon" href=`${path}safari-pinned-tab.svg` color="#5bbad5")
+            
+            meta(name="msapplication-TileColor" content="#da532c")
+            meta(name="theme-color" content="#ffffff")
+            
+            meta(name="twitter:card" content="summary")
+            meta(name="twitter:title" content=title)
+            meta(name="twitter:description" content=description)
+            meta(name="twitter:site" content="@reneedekruijf")
+            meta(name="twitter:creator" content="@reneedekruijf")
+            meta(name="twitter:image:src" content="https://www.webdesignpuntnl.com/site-image-preview.jpg")
+            
+            meta(name="title" property="og:title" content=description)
+            meta(property="og:type" content=`${type ? type : "Website"}`)
+            meta(name="image" property="og:image" content="https://www.webdesignpuntnl.com/site-image-preview.jpg")
+            meta(name="og:url" content="https://www.webdesignpuntnl.com")
+            meta(name="og:site_name" content=title)
+            meta(name="og:locale" content="nl")
+            
+            link(rel="preload" href=`${path}../fonts/arimo-v17-latin-700.woff2` as="font" type="font/woff2" crossorigin)
+
+            link(href=`${path}../sass/main.scss` rel='stylesheet')
+
+
+            title #{title} - Webdesignpuntnl
+    body
+        block header
+            <!-- top logo -->
+            header(class="header") 
+                a(href=`${path}index.pug` title="homepage" class="logo" aria-label="Logo Ga naar Homepage")
+                    img(src=`${path}../images/logo.svg`, alt="Logo Ga naar Homepage" class="logo--image" role="image")
+                //- a(href=`${path}pages/uses.pug` class="header__icon header__icon--tools") tools
+                //- a(href=`${path}pages/side.pug` class="header__icon header__icon--side") side
+                block navigation 
+                    <!-- top navigation -->
+                        nav(class="header__nav")
+                            a(href=(`${path}index.pug`) class=(page == "index" ? "header__nav__link header__nav__link--active" : 'header__nav__link')) home
+                            ul(class="header__nav__menu" data-show="1")
+                                li(class="header__nav__menu__page")
+                                    a(href=(`${path}pages/diensten.pug`) class=(page == "diensten" ? "header__nav__link header__nav__link--active" : 'header__nav__link')) diensten
+                                //- li(class="header__nav__menu__page")
+                                //-     a(href=(`${path}pages/projects.pug`) class=(page == "projects" ? "header__nav__link header__nav__link--active" : 'header__nav__link')) projecten
+                                li(class="header__nav__menu__page")
+                                    a(href=(`${path}pages/blog.pug`) class=(page == "blog" ? "header__nav__link header__nav__link--active" : 'header__nav__link')) blog
+                                li(class="header__nav__menu__page")
+                                    a(href=(`${path}pages/over.pug`) class=(page == "over" ? "header__nav__link header__nav__link--active" : 'header__nav__link')) over
+                                //- li(class="header__nav__menu__page header__nav__menu__page--tools")
+                                //-     a(href=(`${path}pages/uses.pug`) class=(page == "tools" ? "header__nav__link header__nav__link--active" : 'header__nav__link')) tools
+                                //- li(class="header__nav__menu__page header__nav__menu__page--side")
+                                //-     a(href=(`${path}pages/side.pug`) class=(page == "side" ? "header__nav__link header__nav__link--active" : 'header__nav__link')) side
+                                li(class="header__nav__menu__page")
+                                    a(href=(`${path}pages/contact.pug`) class=(page == "contact" ? "header__nav__link header__nav__link--active" : 'header__nav__link')) contact
+                                //- li(class="header__nav__menu__page")
+                                    a(href=(`${path}pages/prijzen.pug`) class=(page == "prijzen" ? "header__nav__link header__nav__link--active" : 'header__nav__link')) prijzen
+                        <!-- hamburger icon -->
+                        div(class="menuSmall change" id="hamburgerIcon")
+        .pageWrapper
+            main(class="main")
+                block content
+                    
+        footer(class="footer")
+            div(class="footer__top")
+                div(class="footer__top__adress")
+                    h3(class="footer__top__adress__heading") Webdesignpuntnl
+                    address
+                        ul
+                            li(class="footer__top__adress__item")
+                                a(href="tel:0031638399229" class="footer__top__adress__tel") &plus;31638399229
+                            li(class="footer__top__adress__item")
+                                span Industrieweg 1A 14
+                            li(class="footer__top__adress__item")
+                                span Culemborg
+                            li(class="footer__top__adress__item")
+                                span kvk: 65789369
+                            li(class="footer__top__adress__item")
+                                span btw: NL001955124B48
+                div(class="footer__top__social")
+                    h3(class="footer__top__social__heading") Social Links
+                    ul(class="footer__top__social__list")
+                        li(class="footer__top__social__list__item")
+                            a(href="https://www.linkedin.com/in/reneedekruijf"  ) 
+                                span(class="iconLinkedin" class="footer__top__icon footer__top__icon--linkedin") Linkedin 
+                        li(class="footer__top__social__list__item")
+                            a(href="https://twitter.com/reneedekruijf"  )
+                                span(class="iconTwitter" class="footer__top__icon footer__top__icon--twitter") Twitter 
+                        li(class="footer__top__social__list__item")
+                            a(href="https://www.instagram.com/renee_de_kruijf/"  )
+                                span(class="iconInstgram" class="footer__top__icon footer__top__icon--instagram") Instagram
+                        li(class="footer__top__social__list__item")
+                            a(href="https://github.com/webdesignpuntnl"  )
+                                span(class="iconGithub" class="footer__top__icon footer__top__icon--github") Github
+            a(class="footer__bottomLinks" href="#" id="noat-cookie-consent__setup") cookies
+            a(class="footer__bottomLinks" href=(`${path}pages/privacy.pug`)) privacy
+            a(class="footer__bottomLinks" href=(`${path}pages/voorwaarden.pug`)) voorwaarden
+                //- div(class="footer__bottom")
+                    p Webdesignpuntnl 2018
+        block script
+            script(src=`${path}../js/main.js`)

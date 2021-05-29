@@ -1,0 +1,59 @@
+extends ../layout/layout
+include ../mixins/blogNav
+
+block prepend head
+    - var page = "validate"
+    - var title = "validate html"
+    - var description = "Een validator zorgt er voor dat er geen fouten in je html zitten"
+    - var path = "../"
+
+block content
+  +blogNav(page)
+    //- validate HTML
+  article(class="article article--blog")     
+    div.align
+      h2.h2.h2--blog HTML valideren
+      p(class="p p__left p__left--blog") 
+        strong.p__firstWord We 
+        | hebben het er, 
+        a(href="html.pug") in een eerdere blogpost
+        |  al eens eerder over gehad, een website heeft een logische structuur nodig. Eigenlijk net zoals bij een tijdschrift of een boek. We hebben koppen, subkoppen, paragrafen, afbeeldingen, lijsten enzovoort.
+      p(class="p p__left p__left--blog") 
+        | Zo bouwen we een website ook op en daarvoor gebruiken we HTML. We hebben onze koppen van h1 t/m h6, we hebben paragrafen die bij die koppen horen. Bij een afbeelding hebben we vaak een stuk beschrijvende tekst en onder de afbeelding een korte beschrijving of titel. We kunnen lijstjes maken met bullets of genummerd. Dus we structuren de inhoud en zorgen dat het duidelijk is wat er bij elkaar hoort.
+      p(class="p p__left p__left--blog") 
+        | Als we een bezoeker hebben die al zijn zintuigen gebruikt om de site waar te nemen dan kunnen we ook nog CSS gebruiken. We kunnen fonts groter maken of een andere kleur geven, we kunnen lijnen trekken om blokken tekst te groeperen, kortom met CSS kunnen we nog meer samenhang brengen in een website.
+      p(class="p p__left p__left--blog")
+        | Bezoekers die gebruik maken van andere technieken om een website te bezoeken hebben vooral baat bij een goede en logische opbouw van een website met HTML. Iemand die een screenreader gebruikt heeft vaak niks aan de stijlen die met CSS worden toegevoegd. Wel heeft diegene baat aan koppen, afbeeldingen met een alt-tag, linkjes, buttons, formulieren en lijstjes. Als de HTML nu niet klopt en de relaties en volgorde van de items op een pagina niet kloppen dan raakt deze bezoeker al snel de weg kwijt. 
+      p(class="p p__left p__left--blog")
+        | Je HTML valideren is iets wat je altijd 'hoort' te doen. Hier zijn vele websites voor te vinden. Meestal kun je de link naar de betreffende pagina invoeren of, als je site nog niet live is, kun je ook de HTML-code plakken. 
+      p(class="p p__left p__left--blog") 
+        | Ik gebruik zelf eigenlijk altijd de 
+        a(href="https://validator.w3.org/") validator
+        |  van het 
+        abbr(title="World Wide Web Consortium" lang="en") W3C. 
+        | Maar er zijn nog heel veel andere. Je kunt het zelfs in je code editor (meestal middels een plugin) doen en als je gebruikt maakt van build-tools (zoals 
+        a(href="https://webpack.js.org/") Webpack
+        |  of 
+        a(href="https://parceljs.org/") Parcel
+        | ) dan kun je het ook integreren in deze tools, je HTML word dan getest op het moment dat de website definitief opgebouwd wordt. Maar voor de meesten onder ons is een de normale website door middel van het gebruik van een linkje het meest gemakkelijk. 
+      p(class="p p__left p__left--blog") 
+        | Misschien heb je ergens een type-foutje gemaakt in de code of ben een vergeten een HTML-element af te sluiten, de validator geeft je een lijst met de eventuele problemen die hij in je code heeft gevonden. Het probleem wordt omschreven en er wordt vermeld op welk lijnnummer het probleem zich bevindt.
+      p(class="p p__left p__left--blog") 
+        | Je hebt twee soorten meldingen, errors en warnings. Ben je bijvoorbeeld ergens vergeten een sectie af te sluiten met &lt;/section&gt; dan krijg je hiervoor een error, weergegeven in rood natuurlijk. De errors moet je echt oplossen. Het kan problemen geven als je dit niet doet. De browser kan er zelf iets totaal anders van maken.
+        img(src="../../images/validate-error.jpg" class="blog__image" alt="klikbare headings met focus" title="klikbare headings met focus")
+      p(class="p p__left p__left--blog") 
+        | Als je Javscript wilt insluiten in je HTML document dan had je daar ooit een type-attribuut voor nodig. Nu hoeft dat niet meer maar het is niet erg als je dat toch doet. Je krijgt dan geen error maar een Warning, in het geel. De warnings hoef je niet op te lossen maar ik zou het zelf wel altijd doen. 
+        img(src="../../images/validate-warning.jpg" class="blog__image" alt="klikbare headings met focus" title="klikbare headings met focus")
+      p(class="p p__left p__left--blog") 
+        | De meeste browser kunnen veel problemen zelf prima oplossen maar mensen die andere technieken gebruiken die kunnen hier wel problemen ondervinden. Dus zorg ervoor dat je HTML in ieder geval vrij is van errors. Zo zorgen we ervoor dat iedereen een goede internet ervaring heeft.
+        span(class="span__date") Gepubliceerd op 25 mei 2020 door Renee de Kruijf 
+        a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="validate" data-show-count="false") Tweet
+block script
+  script(async src="https://platform.twitter.com/widgets.js" charset="utf-8")
+  script(src=`${path}../js/main.js`)
+  script(async src="https://www.googletagmanager.com/gtag/js?id=UA-63079670-2")
+  script
+    | window.dataLayer = window.dataLayer || [];
+    | function gtag(){dataLayer.push(arguments);}
+    | gtag('js', new Date());
+    | gtag('config', 'UA-63079670-2', { 'anonymize_ip': true });

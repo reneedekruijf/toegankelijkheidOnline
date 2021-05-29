@@ -1,0 +1,39 @@
+extends ../layout/layout
+include ../mixins/blogNav
+
+block prepend head
+    - var page = "html"
+    - var title = "html"
+    - var description = "Met de juiste HTML is je pagina al heel erg toegankelijk"
+    - var path = "../"
+
+block content
+  +blogNav(page)
+  //- html
+  article(class="article article--blog")     
+    div.align
+      h2.h2.h2--blog Hypertext Markup Language
+      p(class="p p__left p__left--blog") 
+        strong.p__firstWord Elke 
+        | pagina die je op het internet bekijkt is opgebouwd door middel van HTML oftewel Hypertext Markup Language. HTML is een zogenaamde "opmaaktaal". Door middel van TAGS, zeg maar labels geef je betekenis aan een bepaalde teksten of woorden. 
+      p(class="p p__left p__left--blog") 
+        | Zo heb je bijvoorbeeld voor kopteksten de tags &lt;h1&gt;&lt;/h1&gt; tot &lt;h6&gt;&lt;/h6&gt; en een paragraaf geef je aan met een &lt;p&gt;&lt;/p&gt;. Dit geeft dus betekenis aan de tekst, dit zorg er ook voor dat iemand die een screenreader gebruikt, weet wat het belang van een bepaalde tekst is. Een h1-kop heeft meer gewicht en belang dan een een h6-kop. Door de &lt;p> weet de gebruiker dat hij een paragraaf met tekst aan lezen is. Ook kan hij op basis van de verschillende tags bijvoorbeeld alle koppen of links in een overzicht opvragen. 
+      p(class="p p__left p__left--blog")
+        | Als je de verkeerde TAGS gebruikt dan is je website veel minder toegankelijk. Het is heel belangrijk dat je als websitemaker weet wat de verschillende TAGS allemaal betekenen. Er zijn ook TAGS die geen betekenis hebben. Voorbeelden hiervan zijn  de &lt;div&gt; en de &lt;span&gt;. Deze gebruik je vaak als container om meerdere elementen te groeperen. Voor een screenreader hebben ze geen enkele betekenis en deze zal ze dan  ook negeren. 
+        | Kijk op de pagina's van 
+        a(href="https://developer.mozilla.org/nl/docs/Web/HTML") Mozilla devlopers network (MDN)
+        |  voor meer informatie over HTML.
+        span(class="span__date") Gepubliceerd op 11 april 2020 door Renee de Kruijf 
+        a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="html" data-show-count="false") Tweet
+  
+
+
+block script
+  script(async src="https://platform.twitter.com/widgets.js" charset="utf-8")
+  script(src=`${path}../js/main.js`)
+  script(async src="https://www.googletagmanager.com/gtag/js?id=UA-63079670-2")
+  script
+    | window.dataLayer = window.dataLayer || [];
+    | function gtag(){dataLayer.push(arguments);}
+    | gtag('js', new Date());
+    | gtag('config', 'UA-63079670-2', { 'anonymize_ip': true });

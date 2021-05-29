@@ -1,0 +1,53 @@
+extends ../layout/layout
+include ../mixins/blogNav
+
+block prepend head
+    - var page = "contrast"
+    - var title = "contrast"
+    - var description = "Tekst met een goed contrast is belangrijk voor de leesbaarheid van je content"
+    - var path = "../"
+
+block content
+  +blogNav(page)
+  //- contrast
+  article(class="article article--blog")     
+    div.align
+      h2.h2.h2--blog Contrast
+      p(class="p p__left p__left--blog" ) 
+        strong.p__firstWord Veel
+        | mensen en bedrijven bouwen zelf een webiste in bijvoorbeeld Wordpress of een ander CMS (content management system). Dat kan natuurlijk ook heel makkelijk. Vaak zie je echter wel dat er weinig rekening wordt gehouden met de leesbaarheid van de teksten. En dat is uiteindelijk waar het allemaal om draait bij een website: informatie overbrengen. Eigenlijk bedoel ik hier met leesbaarheid contrast. Dus zijn teksten leesbaar tegenover een bepaalde achtergrond. Een voorbeeld is witte tekst op een gele achtergrond. Misschien ziet dit er mooi uit maar voor de meeste mensen is het onleesbaar. Zelfs mensen met prima ogen hebben hier moeite mee en zullen dan ook afhaken. Dus denk na over je kleurgebruik en over het contrast daarvan.
+      p(class="p p__left p__left--blog p__left--example" ) 
+        | Dit is een voorbeeld van een witte tekst op een gele achtergrond
+      p(class="p p__left p__left--blog" ) 
+        | Let ook op met tekst over afbeeldingen. 
+        div.blog__image__container
+          img(src="../../images/voorbeeld-tekst-over-afbeelding.jpg" class="blog__image blog__image--exampleText" alt="voorbeeld van teksten over een afbeedling")
+      p(class="p p__left p__left--blog" ) 
+        | Als je afbeelding veel lichte kleuren heeft en je zet daar bijvoorbeeld witte tekst overheen dan is dit lastig leesbaar. Je kunt de tekst natuurlijk weglaten of ergens anders plaatsen, je kunt de kleur van de tekst aanpassen of je zet de tekst op een gekleurde achtergrond over de afbeelding heen. 
+      p(class="p p__left p__left--blog" )
+        | Een en ander gaat ook vaak mis in combinatie met de afmetingen van de tekst. Als je tekst te klein is en als ook het contrast niet goed is dan wordt het meteen onleesbaar. Je kunt in sommige gevallen wel een slechter contrast gebruiken als je tekst dan maar groot genoeg is.
+      p(class="p p__left p__left--blog" )
+        | Er zijn op internet vele tools te vinden om je contrasten te testen. Ik gebruik vaak:  
+        a(href="https://colorshark.io/" class="link") Colorshark.
+        |  Je kunt hier de kleur van je achtergrond en van je teksten invoeren. Een melding FAIL of PASS vertelt je of je contrasten goed zijn. Als het contrast niet goed is dan vertelt de site je wat voor opties je hebt om wel een goed contrast te krijgen. Met een sliders kun je tekstkleur aanpassen of de achtergrondkleur. Net zo lang tot je een PASS krijgt. Als je een FAIL krijgt dan moet je deze combinatie niet gebruiken. Als je AA ziet met Large er naast dan kan het wel maar dan moeten de teksten minimaal 24 pixels of 19 pixels Bold zijn. Als je alleen AA ziet dan kun je de kleuren gebruiken. Als je AAA krijgt dan heb je de hoogste contrastverhouding die mogelijk is.
+      p(class="p p__left p__left--blog" )
+        | In de 
+        abbr(title="Web Content Accessibility Guidelines" lang="en") WCAG
+        |  (Web Content Accessibility Guidelines) zijn er drie niveaus van toegankelijkheid. A , AA en AAA. Wil je je site zo toegankelijk mogelijk maken dan moet je er voor zorgen dat je aan A en aan AA voldoet. Aan AAA voldoen is heel moeilijk en wordt zelfs door het 
+        abbr(title="World Wide Web Consortium" lang="en") W3C
+        |  (uitgever van de WCAG) afgeraden. 
+      p(class="p p__left p__left--blog" )
+        | Maak er een gewoonte van om de kleuren van je tekst en achtergronden te testen voordat je deze gaat gebruiken in je site. 
+        span(class="span__date") Gepubliceerd op 25 maart 2020 door Renee de Kruijf 
+        a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="contrast" data-show-count="false") Tweet
+
+
+block script
+  script(async src="https://platform.twitter.com/widgets.js" charset="utf-8")
+  script(src=`${path}../js/main.js`)
+  script(async src="https://www.googletagmanager.com/gtag/js?id=UA-63079670-2")
+  script
+    | window.dataLayer = window.dataLayer || [];
+    | function gtag(){dataLayer.push(arguments);}
+    | gtag('js', new Date());
+    | gtag('config', 'UA-63079670-2', { 'anonymize_ip': true });

@@ -1,0 +1,48 @@
+extends ../layout/layout
+include ../mixins/blogNav
+
+block prepend head
+    - var page = "animatie"
+    - var title = "animatie"
+    - var description = "Wees voorzichtig met animaties en beweging in je website"
+    - var path = "../"
+
+block content
+  +blogNav(page)
+  //- animatie
+  article(class="article article--blog")     
+    div.align
+      h2.h2.h2--blog animatie
+      p(class="p p__left p__left--blog") 
+        strong.p__firstWord Het 
+        | moderne web heeft de laatste jaren steeds meer mogelijkheden gekregen. Beweging en animaties zijn daar een goed voorbeeld van. Als je informatie wilt overdragen met een website dan kunnen subtiele bewegingen en animaties vaak een goede aanvulling zijn. Toch wordt het vaak overdreven en zie je de meest uitgebreide en, vaak, overbodige animaties. Content is king oftewel de inhoud is waar het om gaart. Als de inhoud belangrijk is dan moet een animatie niet het belangrijkste zijn op een website en alleen dienen ter versterking van de inhoud.
+      p(class="p p__left p__left--blog") 
+        | Het kan  natuurlijk dat je een verhaal wilt vertellen of dat een website een uiting van kunst is, dan hebben animaties een ander doel. 
+      p(class="p p__left p__left--blog") 
+        | Waar ik naar toe wil is dat animaties of beweging op het internet voor bepaalde groepen mensen in onze maatschappij een probleem kunnen opleveren.
+      p(class="p p__left p__left--blog")
+        | Als er elementen zijn in een website die knipperen of flitsen met een periode van 3 maal per seconde of meer dan kan dat bij bepaalde bezoekers een toeval of een fysiek reactie veroorzaken. Probeer dit soort content totaal te vermijden of het zo toe te passen dat het niet te vaak knippert of flitst.
+      p(class="p p__left p__left--blog")
+        | In de 
+        abbr(title="Web Content Accessibility Guidelines" lang="en") WCAG 
+        | is dit opgenomen in 
+        a(href="https://www.w3.org/Translations/WCAG21-nl/#toevallen-en-fysieke-reacties") Richtlijn 2.3 Toevallen en fysieke reacties.
+      p(class="p p__left p__left--blog") 
+        | Sommige animaties kunnen ook bepaalde fysieke reacties oproepen bij een bezoeker. Dus als je bewegende elementen wilt hebben in je site zorg er dan voor het niet langer dan 5 seconde  beweegt of dat de bezoeker de mogelijkheid heeft om de animatie te stoppen. 
+      p(class="p p__left p__left--blog")
+        | Een foto-carousel die begint te bewegen zo gauw de bezoeker de site bezoekt is hier een goed voorbeeld van. Zorg er voor dat de beweging niet automatisch begint. Moet dit wel, zorg er dan voor dat de beweging niet te snel gaat. De bezoeker moet de beweging op een gemakkelijke manier kunnen stoppen. Als de beweging is gestopt door de bezoeker dan moet hij wel op een andere manier handmatig door de inhoud kunnen bladeren.
+      p(class="p p__left p__left--blog") 
+        | Als een animatie essentieel is voor de pagina of voor de inhoud dan is deze toegestaan volgens de criteria. Wel kun je een bezoeker van de website vooraf op de hoogte brengen van de animaties of flitsen, zodat ze zelf kunnen bepalen of ze de website wel of niet willen bekijken.
+        span(class="span__date") Gepubliceerd op 29 mei 2020 door Renee de Kruijf 
+        a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="animations" data-show-count="false") Tweet
+
+
+block script
+  script(async src="https://platform.twitter.com/widgets.js" charset="utf-8")
+  script(src=`${path}../js/main.js`)
+  script(async src="https://www.googletagmanager.com/gtag/js?id=UA-63079670-2")
+  script
+    | window.dataLayer = window.dataLayer || [];
+    | function gtag(){dataLayer.push(arguments);}
+    | gtag('js', new Date());
+    | gtag('config', 'UA-63079670-2', { 'anonymize_ip': true });

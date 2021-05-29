@@ -1,0 +1,47 @@
+extends ../layout/layout
+include ../mixins/blogNav
+
+block prepend head
+    - var page = "frustraties"
+    - var title = "5 frustraties"
+    - var description = "5 frustraties voor blinde of slechtziende bezoekers"
+    - var path = "../"
+
+block content
+  +blogNav(page)
+  //- frustraties  
+  article(class="article article--blog")     
+    div.align
+      h2.h2.h2--blog 5 frustraties voor een screenreader
+      p(class="p p__left p__left--blog") 
+        strong.p__firstWord Websites
+        | die weinig of geen rekening houden met toegankelijkheid kunnen een groot probleem vormen voor mensen die blind of slechtziend zijn. Stel je voor dat je via het internet een officieel document moet aanvragen en er is op de website waar je dit moet doen niet voldoende rekening gehouden met gebruikers van een screenreader, het kan zijn dat dit onmogelijk taak is. Vaak zijn er ook geen alternatieve opties om dit op andere manier te doen.
+      p(class="p p__left p__left--blog")
+        | Een screenreader leest een website voor aan de gebruiker zodat deze kan navigeren op de website. Een screenreader kan ook samenwerken met andere apparatuur zoals een brailleregel. Waar lopen gebruikers van dit soort apparatuur nou tegenaan als een website het niet zo nauw neemt met de toegankelijkheid?
+      h3.h3.h3--blog Links en buttons zonder label
+      p(class="p p__left p__left--blog")
+       | Vaak zie je op een website buttons of links waar 'Klik hier' bij staat. Of ze hebben helemaal geen beschrijving of label. Iemand die een screenreader gebruikt is afhankelijk van dit label. Het label wordt namelijk voorgelezen. Als er geen label is of het label is vaag dan weet deze bezoeker dus niet waar de link of button naar toe gaat als er op geklikt wordt.  
+      h3.h3.h3--blog Afbeeldingen zonder beschrijving
+      p(class="p p__left p__left--blog")
+       | Dit is ook wel bekend als de alt-tekst. Met de alt-tekst geef je een beschrijving van de afbeelding. Screenreaders lezen deze beschrijving voor. Als er geen beschrijving is dan zegt de screenreader alleen iets als: 'afbeelding'  en verder niks. Als de afbeelding belangrijk is voor de informatie op de website dan mist deze bezoeker dus belangrijke informatie. Een alt-tekst moet een duidelijke, heldere en bondige beschrijving geven van de afbeelding.
+      h3.h3.h3--blog Gebruik van koppen
+      p(class="p p__left p__left--blog")
+       | Screenreaders gebruiken kopteksten om snel te navigeren naar informatie. Een goed gebruik van kopteksten zorgt er voor dat bezoekers niet door hele lange stukken tekst hoeven te scrollen. Een screenreader kan een lijst met kopteksten voorlezen zodat de bezoeker snel naar de juiste informatie kan navigeren.
+      h3.h3.h3--blog Ontoegankelijke formulieren
+      p(class="p p__left p__left--blog")
+       | Op websites wordt er vaak gebruik gemaakt van formulieren. Als de velden niet goed gelabeld zijn dan weet de bezoeker met een screenreader niet waar het veld voor dient en kan hij niet de juiste informatie invullen. Als dit een contactformulier is dan kan deze bezoeker dus geen contact met je opnemen aangezien het voor deze bezoeker niet mogelijk is om het formulier in te vullen.
+      h3.h3.h3--blog Automatisch starten van audio en video
+      p(class="p p__left p__left--blog")
+       | Voor de meeste bezoekers is het al vervelend als op een website de video of de audio automatisch start maar voor mensen met een screenreader is het nog veel vervelender. Als de audio of video meteen begint met spelen dan kan het zijn dat ze de screenreader niet meer kunnen horen. Ze moeten eerst de audio of video stoppen. Als het dan ook nog zo is dat de stop of pauze button van de video of de audio niet goed gelabeld is dan is het onmogelijk om de website te gebruiken en zullen ze simpelweg vertrekken van je website. Zorg er voor dat niks op je website vanzelf start met spelen of mute de audio en geef de bezoeker een bruikbare optie om het afspelen te stoppen of te pauzeren.
+      p(class="p p__left p__left--blog")
+        span(class="span__date") Gepubliceerd op 11 november 2020 door Renee de Kruijf 
+        a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="frustraties" data-show-count="false") Tweet
+block script
+  script(async src="https://platform.twitter.com/widgets.js" charset="utf-8")
+  script(src=`${path}../js/main.js`)
+  script(async src="https://www.googletagmanager.com/gtag/js?id=UA-63079670-2")
+  script
+    | window.dataLayer = window.dataLayer || [];
+    | function gtag(){dataLayer.push(arguments);}
+    | gtag('js', new Date());
+    | gtag('config', 'UA-63079670-2', { 'anonymize_ip': true });

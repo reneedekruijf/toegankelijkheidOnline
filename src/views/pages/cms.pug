@@ -1,0 +1,45 @@
+extends ../layout/layout
+include ../mixins/blogNav
+
+block prepend head
+    - var page = "cms"
+    - var title = "cms en toegankelijkheid"
+    - var description = "let goed op als je zelf een website bouwt"
+    - var path = "../"
+
+block content
+  +blogNav(page)
+  //- CMS
+  article(class="article article--blog")     
+    div.align
+      h2.h2.h2--blog CMS en toegankelijkheid
+      p(class="p p__left p__left--blog") 
+        strong.p__firstWord Eigenlijk 
+        | is het voor ieder bedrijf wel een goed idee om online aanwezig te zijn. Dit kun je met social-media doen maar de meeste mensen gaan toch al snel op zoek naar de website van een bedrijf. 
+      p(class="p p__left p__left--blog") Grote bedrijven hebben een (groot) budget voor hun website en vaak zelfs mensen in dienst om de site te bouwen en bij te houden. Voor kleine ondernemers dit natuurlijk erg duur. Je kunt iemand inhuren om je website te bouwen, als het goed is kun je hem dan zelf bijhouden. Je kunt de teksten en afbeeldingen zelf aanpassen. 
+      p(class="p p__left p__left--blog") Meestal wordt hiervoor een zogenaamde CMS gebruikt. Oftewel een Content Management System, een systeem waarbij je zelf de content beheert. Enkele voorbeelden hiervan zijn: 
+        a(href="https://nl.wordpress.com/") Wordpress
+        | , 
+        a(href="https://www.joomla.org/") Joomla
+        |  en  
+        a(href="https://www.drupal.org/") Drupal. 
+      p(class="p p__left p__left--blog") Meestal wordt hiervoor een zogenaamde CMS gebruikt. Oftewel een Content Management System, een systeem waarbij je zelf de content beheert. Enkele voorbeelden hiervan zijn: Wordpress, Joomla en Drupal. 
+      p(class="p p__left p__left--blog") Als je een kant en klaar thema gebruikt dan zullen we meer mensen zijn die ditzelfde thema gebruiken. Dit is wel kort door de bocht, vaak kun je er zelf wel dingen aan aanpassen. Hangt er ook vanaf of je een gratis thema neemt of een betaalde. Die laatste hebben meestal veel meer functies. 
+      p(class="p p__left p__left--blog") Maar goed je hebt dus een thema uitgekozen en nu ga je wat afbeeldingen toevoegen en wat teksten. Dit kan je allemaal (vrij) makkelijk zelf doen maar als je niet een klein beetje verdiept in de materie (HTML) dan kan je nieuwe website ontoegankelijk worden voor bepaalde groepen mensen.
+      p(class="p p__left p__left--blog") Ik bedoel dan mensen die niet met een muis werken maar met bijvoorbeeld het toetsenbord, een screenreader of een brailleregel. 
+      p(class="p p__left p__left--blog") Ik bedoel dan mensen die niet met een muis werken maar met bijvoorbeeld het toetsenbord, een screenreader of een brailleregel. 
+      p(class="p p__left p__left--blog") Met afbeeldingen is dit anders. Een screenreader negeert een afbeelding als deze geen alternatieve beschrijving heeft. Bij de meeste CMS'en kun je dit invullen na uploaden van de afbeelding maar dat moet je dus wel weten en ook zelf doen. Doe je dit niet dan zal niet iedereen de afbeeldingen kunnen 'zien'. 
+      p(class="p p__left p__left--blog") Hetzelfde geldt voor teksten. De koppen boven de paragrafen hebben een volgorde van hoe belangrijk ze zijn, hoofdkop, subkop enzovoort. Als je dit niet doet dan is het voor iemand met een screenreader heel lastig om  de opbouw van een pagina te kunnen bepalen. Vaak kun je dit doen door middel van knopjes in de teksteditor maar als je dat niet weet dan wordt het al gauw vergeten.
+      p(class="p p__left p__left--blog") Een website opzetten met een CMS is niet zo moeilijk maar je moet je toch wel in een paar zaken verdiepen anders loop je klanten mis en dat is jammer natuurlijk.
+      p(class="p p__left p__left--blog")
+        span(class="span__date") Gepubliceerd op 5 juli 2020 door Renee de Kruijf 
+        a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="cms" data-show-count="false") Tweet
+block script
+  script(async src="https://platform.twitter.com/widgets.js" charset="utf-8")
+  script(src=`${path}../js/main.js`)
+  script(async src="https://www.googletagmanager.com/gtag/js?id=UA-63079670-2")
+  script
+    | window.dataLayer = window.dataLayer || [];
+    | function gtag(){dataLayer.push(arguments);}
+    | gtag('js', new Date());
+    | gtag('config', 'UA-63079670-2', { 'anonymize_ip': true });

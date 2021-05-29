@@ -1,0 +1,105 @@
+extends layout/layout
+
+block prepend head
+    - var page = "index"
+    - var title = "welkom bij Webdesignpuntnl"
+    - var description = "Webdesignpuntnl Culemborg is gespecialiseerd in het ontwerpen, bouwen en testen van toegankelijke websites"
+    - var path = ""
+
+    script 
+        | (function (m, a, i, l, e, r) {
+        |    m['MailerLiteObject'] = e;
+        |
+        |    function f() {
+        |        var c = { a: arguments, q: [] };
+        |        var r = this.push(c);
+        |        return "number" != typeof r ? r : f.bind(c.q);
+        |    }
+        |
+        |    f.q = f.q || []; m[e] = m[e] || f.bind(f.q); m[e].q = m[e].q || f.q; r = a.createElement(i);
+        |    var _ = a.getElementsByTagName(i)[0]; r.async = 1; r.src = l + '?v' + (~~(new Date().getTime() / 1000000));
+        |    _.parentNode.insertBefore(r, _);
+        |    })
+        |
+        |    (window, document, 'script', 'https://static.mailerlite.com/js/universal.js', 'ml');
+        |    var ml_account = ml('accounts', '3023458', 'e8q5w0m6i5', 'load');
+        
+block content
+    article(class="article")
+    h2(class="h2 h2--index") bouwen aan toegankelijke websites
+    //- h3.h3 hart voor een toegankelijk internet
+    section.align
+        p(class="p p__right p__right--index")
+            strong.p__firstWord Quickscan toegankelijkheid
+            | Heb je een website? En weet je niet zeker of deze of deze door iedereen op de juiste wijze kan worden bezocht en gebruikt? Laat je website dan testen op toegankelijkheid. Met een Quickscan wordt er gekeken naar een aantal belangrijke toegankelijkheidseisen. De Quickscan geeft een grove indicatie van wat er verbeterd kan worden aan de toegankelijkheid, er zijn veel meer punten waarop getest moet worden. Wil je meer weten over de Quickscan klik dan op de button.
+            | Wil je weten of je website toegankelijk is of hoe je deze toegankelijk kunt maken, lees dan hieronder verder. 
+        a(href="pages/contact.pug" class="link__button link__button--cta") quickscan  
+    section.align
+        p(class="p p__left p__left--index") 
+            strong.p__firstWord Onderzoek toegankelijkheid
+            | In het onderzoek worden 6 pagina's gecontroleerd op alle richtlijnen voor een toegankelijke website. Het onderzoek is prima optie voor bedrijven en instellingen die alleen de verbeterpunten zichtbaar willen hebben maar die zelf de kennis in huis hebben om de website toegankelijk te maken. Neem voor meer informatie over het onderzoek  
+            a(href="pages/contact.pug") contact op!
+        img(src="../images/testing.svg" class="index__image right" alt="")
+    section.alignsection.align
+        p(class="p p__right p__right--index") 
+            strong.p__firstWord Audit toegankelijkheid
+            | De Audit is de meest complete optie. Alles is eigenlijk hetzelfde als bij het onderzoek maar bij de audit worden er, indien nodig, extra pagina's gecontroleerd. Het is een volledige controle van de toegankelijkheidsrichtlijnen. Ook bij de Audit is het eindresultaat een rapport maar in dit geval worden er ook oplossingen voorgesteld die de toegankelijkheid kunnen vergroten. 
+            | Neem voor meer informatie over de Audit 
+            a(href="pages/contact.pug") contact op!
+        img(src="../images/designing.svg" class="index__image left" alt="") 
+    section.align
+        p(class="p p__left p__left--index") 
+            strong.p__firstWord Advies
+            | Wil je zelf een website bouwen of laat je er eentje bouwen? Wil je dat de website toegankelijk is voor iedere bezoeker? Ik kan je daarbij helpen door het geven van advies. Toegankelijkheid is een proces en het is goed hier vanaf het begin rekening mee te houden. Het is een constant proces en vraagt bewustwording van de hele organisatie.
+            | Neem voor meer informatie over de het geven van advies  
+            a(href="pages/contact.pug") contact op!
+        img(src="../images/office.svg" class="index__image right" alt="")
+    section.align
+        //- p(class="p p__right p__right--index") 
+        //-     strong.p__firstWord O
+        //-     | 
+        //- img(src="images/office.svg" class="index__image right" alt="")
+        p(class="p p__right p__right--freeTest")
+            strong.p__firstWord Gratis  
+            | PDF met tips en trucs die je snel en gemakkelijk kunt toepassen op je eigen site. Het enige wat het je kost is je emailadres om zo af en toe een nieuwsbrief te ontvangen met updates over mijn blog of andere handige zaken die met het internet en met toegankelijkheid te maken hebben. Je kunt je natuurlijk altijd afmelden als je de mails niet langer wilt ontvangen. 
+        div(id="mlb2-3847912" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-3847912")
+            div(class="ml-form-align-center")
+                div(class="ml-form-embedWrapper embedForm")
+                    div(class="ml-form-embedBody ml-form-embedBodyDefault row-form")
+                        div(class="ml-form-embedContent" style="margin-bottom:0")
+                            form(class="ml-block-form" action="https://static.mailerlite.com/webforms/submit/k2u2z4" data-code="k2u2z4" method="post" target="_self")
+                                div(class="ml-form-formContent")
+                                    div(class="ml-form-fieldRow")
+                                        div(class="ml-field-group ml-field-name ml-validate-required")
+                                            label naam
+                                            input(aria-label="name" aria-required="true" type="text" class="form-control" data-inputmask="" name="fields[name]" placeholder="" autocomplete="name")
+                                        div(class="ml-form-fieldRow ml-last-item")
+                                            div(class="ml-field-group ml-field-email ml-validate-email ml-validate-required")
+                                                label email
+                                                input(aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="" autocomplete="email")
+                                        div(class="ml-form-checkboxRow ml-validate-required")
+                                            label(class="checkbox") 
+                                                input(type="checkbox") 
+                                                div(class="label-description")
+                                                    p Ik ga akkoord met de 
+                                                        a(href="https://www.webdesignpuntnl.com/pages/privacy.pug#") privacy verklaring
+                                        div(class="ml-form-recaptcha ml-validate-required")
+                                            script(src="https://www.google.com/recaptcha/api.js")
+                                            div(class="g-recaptcha" data-sitekey="6Lf1KHQUAAAAAFNKEX1hdSWCS3mRMv4FlFaNslaD")
+                                        input(type="hidden" name="ml-submit" value="1")
+                                        div(class="ml-form-embedSubmit")
+                                            button(type="submit" class="primary") versturen
+                                            button(disabled="disabled" style="display:none" type="button" class="loading")
+                                                div(class="ml-form-embedSubmitLoad")
+                                                    span(class="sr-only") Loading...
+                                        input(type="hidden" name="anticsrf" value="true")
+                                    div(class="ml-form-successBody row-success" style="display:none")
+                                        div(class="ml-form-successContent")
+                                            h4 Thank you!
+                                            p You have successfully joined our subscriber list.
+    script
+        | function ml_webform_success_3847912(){try{window.top.location.href="https://www.webdesignpuntnl.com/pages/gratispdf-verzonden.pug"}catch(n){window.location.href="https://www.webdesignpuntnl.com/pages/gratispdf-verzonden.pug"}}
+    //- <img src="https://track.mailerlite.com/webforms/o/3847912/k2u2z4?v1617286431" width="1" height="1" style="max-width:1px;max-height:1px;visibility:hidden;padding:0;margin:0;display:block" alt="." border="0">
+    script(src="https://static.mailerlite.com/js/w/webforms.min.js?v0c75f831c56857441820dcec3163967c" type="text/javascript")
+        
+    +testimonials

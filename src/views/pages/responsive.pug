@@ -1,0 +1,47 @@
+extends ../layout/layout
+include ../mixins/blogNav
+
+block prepend head
+    - var page = "responsive"
+    - var title = "responsive website"
+    - var description = "Een responsive website heeft vele voordelen. Je bereikt meer mensen bijvoorbeeld! En je scoort hoger in Google"
+    - var type = "article"
+    - var path = "../"
+
+block content
+  +blogNav(page)
+    //- responsive  
+  article(class="article article--blog")     
+    div.align
+      h2.h2.h2--blog Een responsive website
+      p(class="p p__left p__left--blog") 
+        strong.p__firstWord Even
+        | een website checken op je mobiele telefoon is tegenwoordig heel normaal. Sterker nog er wordt meer gesurft met een mobiele telefoon dan bijvoorbeeld op een laptop of desktop. Vandaar dat je je website op alle schermen goed moet werken, anders is je klant of  bezoeker zo weer weg.
+      p(class="p p__left p__left--blog")
+       | Een website die goed werkt op elk scherm en apparaat noemen we repsonsive. De website 'reageert' op de maat van het scherm. De website 'past' zich als het ware aan op het scherm waar je de website op kijkt.
+      p(class="p p__left p__left--blog")
+        | Een mooi voorbeeld hiervan is het menu. Als je een website bekijkt op het scherm van je laptop dan staat het menu vaak bovenaan en de meun-items staan op een lijn naast elkaar. Op een klein mobiel scherm lukt dit niet, vandaar dat je op zo'n scherm vaak een hamburgermenu ziet. Je klikt op het hamburger-icoon en het menu wordt zichtbaar.
+      p(class="p p__left p__left--blog")
+        | Een ander voorbeeld is dat op een groot scherm de items vaak naast elkaar staan en over de volle breedte van het scherm. Denk hierbij aan een webshop voor kleding, dit zijn losse blokken voor elk kledingstuk, er staan dan bijvoorbeeld 4 kledingstukken naast elkaar en daaronder dan weer een rij met 4 kledingstukken. Op een klein scherm is geen plek en staan ze dan onder elkaar.
+      p(class="p p__left p__left--blog")
+        | Als jouw website alleen gebouwd is voor 1 soort scherm, voor een groot scherm, dan ziet de website er op een klein scherm precies hetzelfde uit. Het nadeel hiervan is dat alles heel erg klein is. De buttons zijn klein maar de tekst ook. Je moet inzoomen om iets te kunnen lezen of ergens op te kunnen klikken, zo ben je al snel de weg kwijt. Voor mij is dit dan ook meestal (of ik moet echt iets nodig hebben en het nergens anders kunnen vinden) een reden om per direct te vertrekken van zo'n website.
+      p(class="p p__left p__left--blog")
+        | Het is natuurlijk heel 'makkelijk' om zelf een website te maken met Wordpress en een standaard thema. De meeste thema's zijn responsive en werken dus goed op alles schermen maar dit moet je wel zelf checken. Dus check, voordat je het thema aanschaft, of het gemaakt is om goed te werken op zowel kleine als grote schermen.  Check dit altijd ook zelf als de website klaar is of, beter nog, tussendoor als je aan het bouwen bent. Dit kun je doen door je website te bekijken op een tablet of een mobiele telefoon. 
+      p(class="p p__left p__left--blog")
+        | Een website die responsive is heeft een paar grote voordelen. Zo krijg je straf van Google (en andere zoekmachines) als je website niet responsive is. Je komt dan minder hoog in de zoekresultaten te staan. Daarnaast zorgt het voor meer bezoekers en bezoekers blijven ook langer op je website. Met andere woorden het maakt je website toegankelijker.
+      p(class="p p__left p__left--blog")
+        | Toegankelijker voor iedereen wel te verstaan. Dus ook voor mensen met een beperking. Het kan voor sommige mensen namelijk nogal lastig zijn om lange stukken tekst op een drukke pagina te lezen. Het voordeel van een website bekijken op een klein scherm is dat er vaak onderdelen weg worden gelaten. Op een klein scherm is minder plek waardoor de website vaak minder druk is. De teksten zijn smaller (omdat het scherm smaller is) waardoor het prettiger leest.
+      p(class="p p__left p__left--blog")
+        | Loop geen klanten of bezoekers mis doordat je website er alleen goed uitziet op een groot scherm!
+      p(class="p p__left p__left--blog")
+        span(class="span__date") Gepubliceerd op 17 november 2020 door Renee de Kruijf 
+        a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="responsive" data-show-count="false") Twee
+block script
+  script(async src="https://platform.twitter.com/widgets.js" charset="utf-8")
+  script(src=`${path}../js/main.js`)
+  script(async src="https://www.googletagmanager.com/gtag/js?id=UA-63079670-2")
+  script
+    | window.dataLayer = window.dataLayer || [];
+    | function gtag(){dataLayer.push(arguments);}
+    | gtag('js', new Date());
+    | gtag('config', 'UA-63079670-2', { 'anonymize_ip': true });

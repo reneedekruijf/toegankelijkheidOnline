@@ -1,0 +1,76 @@
+extends ../layout/layout
+include ../mixins/blogNav
+
+block prepend head
+    - var page = "menu"
+    - var title = "toegankelijk menu"
+    - var description = "Hoe zorg je er voor dat je menu toegankelijk is voor iedereen"
+    - var path = "../"
+
+block content
+  +blogNav(page)
+  //- accessible menu
+  article(class="article article--blog")     
+    div.align
+      h2.h2.h2--blog Een toegankelijk menu
+      p(class="p p__left p__left--blog") 
+        strong.p__firstWord Ik 
+        | heb het al eens eerder genoemd hier. Een toegankelijke website is een proces. Zo ook bij mijn eigen website. Ik heb deze enige tijd terug gebouwd en had daar niet meteen, vanaf het begin, rekening gehouden met toegankelijkheid. Maar nu pak ik steeds (als ik tijd heb) een onderdeel aan om te zorgen dat de website wel toegankelijk wordt.
+        | Nu stond het hamburgermenu op de planning. Iedereen kent hem wel, de knop met de 3 streepjes die vooral te zien is op een klein scherm. De mijne heb ik zelf gemaakt met HTML, CSS en Javascript. Het is geen native element van HTML, dat wil zeggen dat er geen standaard HTML-TAG is om een hamburgerbutton in je website te zetten. De meeste developers maken ze zelf.
+        | Ik had dat met de volgende code gedaan:
+      p(class="p p__left p__left--blog")
+        pre.language-html.blog
+          span.h3.h3--hidden Voorbeeld HTML voor een hamburger button
+          code.language-html
+            | &lt;div class="hamburgerMenu"&gt;
+            |   &lt;div class="eersteStreep"&gt;&lt;/div&gt;
+            |   &lt;div class="tweedeStreep"&gt;&lt;/div&gt;
+            |   &lt;div class="derdeStreep"&gt;&lt;/div&gt;
+            | &lt;/div&gt; 
+      p(class="p p__left p__left--blog")
+        | Een DIV met daar weer drie DIV'jes in. Met CSS pas je dan alles zo aan dat je een button krijgt met ook nog een leuk effect als je klikt. De streepjes worden een kruis als het menu open is, de strepen komen weer terug na nog een klik als het menu weer sluit. De eerste DIV (parent) heb ik met Javascript klikbaar gemaakt. Dat kan en is prima maar niet als het toegankelijkheid belangrijk is, en dat is het altijd. Een DIV is een element wat in HTML geen betekenis heeft. Het is een container en wordt door alle technieken en hulpmiddelen genegeerd. Dus ook door het toetsenbord en screenreaders. Dat betekent dat als iemand het toetsenbord gebruikt om te navigeren dan kan hij het hamburgermenu niet bereiken, hij kan dan ook nooit het menu openen.
+      p(class="p p__left p__left--blog")
+        | Je kunt dit met Javscript oplossen maar dat is toch wel lastig. Er is een veel makkelijkere oplossing,  de eerste DIV wordt vervangen door een BUTTON element. Dit is een interactief element en te bereiken met de TAB-toets. Nu kan een bezoeker met het te toetsenbord de button focus geven door de TAB-toets te gebruiken en met ENTER of SPATIE het menu openen. Misschien moet er hier en daar wat HTML en CSS worden aangepast maar de button kan precies zo gemaakt worden als je zelf wilt en is direct toegankelijk.
+      p(class="p p__left p__left--blog")
+        pre.language-html.blog
+          span.h3.h3--hidden Voorbeeld HTML voor een hamburger button
+          code.language-html
+            | &lt;button class="hamburgerMenu"&gt;
+            |   &lt;span class="eersteStreep"&gt;&lt;/span&gt;
+            |   &lt;span class="tweedeStreep"&gt;&lt;/span&gt;
+            |   &lt;span class="derdeStreep"&gt;&lt;/span&gt;
+            | &lt;/button&gt; 
+      p(class="p p__left p__left--blog")
+        | Toen ik dit gedaan had kwam meteen het volgende punt om de hoek kijken. In mijn menu zitten 3 items (links naar andere delen van de site) dit zijn ook interactieve elementen en kunnen dus benadert worden met de TAB-toets. Als menu gesloten is en ik TAB vanaf de hamburgerbutton verder dan verdwijnt de focus opeens. Dat komt omdat de focus dan op 1 van de drie items in het menu zit. Dat menu is visueel wel onzichtbaar 
+        a(href="verbergen.pug") (lees mijn blog over verbergen als je meer wilt weten over de verschillende manieren van verbergen)
+        |  maar niet voor het toetsenbord. Dus je kan deze link nog steeds activeren met de TAB-toets.
+      p(class="p p__left p__left--blog")
+        | Daar moet dus ook nog een oplossing voor komen. Dit kan je doen met TABINDEX. Normaal is volgorde waarin je interactieve elementen zet ook de volgorde die de TAB-toets zal volgen. Maar met TABINDEX kan je dit veranderen.
+      p(class="p p__left p__left--blog")
+        pre.language-html.blog
+          span.h3.h3--hidden Voorbeeld HTML van TABINDEX
+          code.language-html
+            | &lt;nav&gt;
+            |   &lt;a tabindex="-1"&gt;&lt;/a&gt;
+            |   &lt;a tabindex="2"&gt;&lt;/a&gt;
+            |   &lt;a tabindex="3"&gt;&lt;/a&gt;
+            |   &lt;a tabindex="1"&gt;&lt;/a&gt;
+            | &lt;/nav&gt;  
+      p(class="p p__left p__left--blog")
+       | De volgorde voor de TAB-toets wordt nu van de onderste link naar de bovenste en dan naar de middelste, de bovenste link kan helemaal geen focus meer krijgen. Dit geef je dus aan met een cijfer van 1 tot 3. Als je de TABINDEX op -1 zet dan haal je de focus weg. Met andere woorden je kunt de link niet meer bereiken met de TAB-toets. Dit is dus precies wat ik doe als het menu gesloten is. Met Javascript zet ik op alle drie de linkjes een TABINDEX van -1. Als het menu gesloten is dan gaat de focus niet naar de linkjes in het (verborgen) menu maar gelijk naar de volgende link ergens anders op de pagina.
+      p(class="p p__left p__left--blog")
+        | In een screenreader kun je een overzicht oproepen van alle links in een pagina. Ik verberg het menu op mijn website niet met display: none om deze reden kan een screenreader de linkjes gewoon vinden als het menu gesloten is.
+      p(class="p p__left p__left--blog")
+        | Ik moet wel nog wat ARIA-labels (later meer over ARIA-labels in deze blog) toevoegen aan de knop en het menu. Nu meldt de screenreader alleen dat er een button is maar over deze actief is en daarmee het menu zichtbaar is dat wordt niet gemeld aan de gebruiker. Ook dit staat op mijn lijstje om te worden opgelost.
+      p(class="p p__left p__left--blog")
+        span(class="span__date") Gepubliceerd op 25 juni 2020 door Renee de Kruijf 
+        a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="accessiblemenu" data-show-count="false") Tweet  
+block script
+  script(async src="https://platform.twitter.com/widgets.js" charset="utf-8")
+  script(src=`${path}../js/main.js`)
+  script(async src="https://www.googletagmanager.com/gtag/js?id=UA-63079670-2")
+  script
+    | window.dataLayer = window.dataLayer || [];
+    | function gtag(){dataLayer.push(arguments);}
+    | gtag('js', new Date());
+    | gtag('config', 'UA-63079670-2', { 'anonymize_ip': true });

@@ -1,0 +1,29 @@
+extends ../layout/layout
+
+block prepend head
+    - var page = "side"
+    - var title = "leermomenten"
+    - var description = "Dit zijn de zogenaamde side projecten. Kleine projectjes om te leren en proberen."
+    - var path = "../"
+
+block content
+    article(class="article")
+      h2(class="h2") extra projecten
+      section(class="projects" title="calculator")
+        a(href="https://side.webdesignpuntnl.com/calculator"   class="projects__link")
+          div(class="projects__card")
+            .projects__overlay 
+              p(class="projects__overlay__p") 
+                | In dit project heb ik de Iphone calculator nagemaakt. Met CSS-grid en ES6.
+            img(src="../images/calculator.png" class="projects__card__screenshots" alt="calculator met Html, Css en Javascript")
+      //- meal app with React an Axios
+      section(class="projects" title="Random Meal app")
+        a(href="https://side.webdesignpuntnl.com/mealapp"   class="projects__link")
+          div(class="projects__card")
+            .projects__overlay 
+              p(class="projects__overlay__p") 
+                | In dit project heb ik een app gemaakt die een willekeurig recept uit een database haalt. Met CSS-grid, React en Axios.
+            img(src="../images/mealapp.png" class="projects__card__screenshots" alt="random meal app")
+      
+            
+      

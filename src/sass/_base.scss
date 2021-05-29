@@ -1,0 +1,678 @@
+.hide__index__image {
+  opacity: 0;
+  transition: all 1s;
+  margin-left: -150px !important;
+}
+
+.show__index__image {
+  margin-left: initial !important;
+  opacity: 1;
+  transition: all 1s;
+}
+
+.twitter-share-button {
+  vertical-align: bottom;
+}
+
+.main {
+  margin: 1rem 0 20rem 0;
+  text-align: center;
+  position: relative;
+  @include clearfix;
+}
+
+.h2 {
+  font-size: 1.8rem;
+  padding: 3rem 0 2rem 0;
+  letter-spacing: 0.1rem;
+  position: relative;
+
+  &--blog {
+    padding: 0 !important;
+    text-align: left;
+    margin: 2rem 0 0.3rem 2.3rem;
+  }
+
+  &--index {
+    padding-bottom: 5rem;
+  }
+}
+
+.h3 {
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem;
+  margin-bottom: 3rem;
+
+  &--left {
+    text-align: left;
+    margin: 2rem 0 0.5rem 2rem;
+  }
+
+  &--right {
+    text-align: left;
+    margin: 2rem 0 0.5rem 2rem;
+  }
+
+  &--hidden {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: -999px;
+  }
+
+  &--blog {
+    font-size: 1.3rem;
+    float: left;
+    margin: 2rem 0 0.3rem 2.3rem;
+    text-align: left;
+    width: 100%;
+  }
+}
+
+.h4 {
+  font-size: 1.05rem;
+  letter-spacing: 0.1rem;
+  // margin-bottom: -2rem;
+
+  &--blog {
+    float: left;
+    margin: 2rem 0 -0.8rem 2.3rem;
+    text-align: left;
+    width: 100%;
+  }
+}
+
+.ol {
+  &--blog {
+    margin-left: 3rem;
+  }
+}
+
+.blog__numbered__list {
+  float: left;
+  font-family: $fontCustom;
+  font-size: 1.1rem;
+  letter-spacing: 0.1rem;
+  text-align: left;
+  margin: 2rem 2rem 2rem 4rem;
+}
+
+.quickscan__numbered__list {
+  float: right;
+  font-family: $fontCustom;
+  font-size: 1.1rem;
+  letter-spacing: 0.1rem;
+  text-align: left;
+  margin: -4rem 2rem 8rem -2rem;
+}
+
+.link__button {
+  @include buttonLink;
+
+  margin: 0 auto 4rem auto;
+  width: 50%;
+  min-width: 130px;
+}
+
+.blog__flag {
+  display: block;
+  width: 3rem;
+  float: right;
+  margin: 0 1rem 2rem 0.5rem;
+}
+
+.nextLine {
+  display: block;
+
+  &--freePDF {
+    margin-top: 1.5rem;
+  }
+
+  &--cost {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+}
+
+.section__blog {
+  margin-top: 2rem;
+}
+
+.article--blog {
+  margin-top: 4rem;
+  margin-bottom: 6rem;
+
+  &:first-child {
+    margin-top: 1rem;
+  }
+}
+
+.blog__nav__list {
+  text-align: left;
+  margin: 5rem 2rem 6rem 2rem;
+
+  &__item {
+    display: inline-block;
+    margin: 1.5rem 0 0 1rem;
+  }
+
+  &__link {
+    // text-decoration: none;
+    background-color: $yellowColor;
+    background-repeat: no-repeat no-repeat;
+    border-radius: 2px;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    color: $blackColor;
+    padding: 0.4rem;
+    text-transform: uppercase;
+
+    &--active {
+      text-decoration: none;
+      background-color: $orangeColor;
+      border-radius: 2px;
+      font-size: 1.2rem;
+      font-weight: bolder;
+      color: $blackColor;
+      padding: 0.4rem;
+      text-transform: uppercase;
+      cursor: default;
+    }
+  }
+}
+
+// blogpost about magnification software
+.p__left--tooltip {
+  display: none;
+}
+
+.index__image {
+  width: 50%;
+  max-width: 230px;
+  margin: -4rem 0 4rem 0;
+  border-radius: 10px;
+
+  &:first-child {
+    margin-top: 3rem;
+  }
+}
+
+.p {
+  font-size: 1.1rem;
+  text-align: left;
+  letter-spacing: 0.1rem;
+  margin: 0 auto 6rem auto;
+  padding: 0 2rem;
+
+  &__left--blog {
+    margin: 2rem 0 0 0;
+    clear: both;
+  }
+
+  &__left--example {
+    color: #fff;
+    background-color: $yellowColor;
+    width: 70%;
+    padding: 1rem;
+    border-radius: 5px;
+    margin: 2rem 0 1rem 3rem;
+  }
+
+  &__right--freeTest {
+    margin: 0 0 3rem 0;
+  }
+}
+
+.p__firstWord {
+  color: $blackColor;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  background-color: $yellowColor;
+  border-radius: 2px;
+  padding: 0.2rem 0.2rem 0 0.2rem;
+  margin: 0 0.5rem 0 0;
+
+  &--privacy {
+    display: block;
+  }
+}
+
+.link {
+  color: $blackColor;
+  font-size: 1rem;
+
+  &:hover,
+  &:focus {
+    color: $orangeColor;
+  }
+}
+
+.list {
+  font-family: $fontCustom;
+  font-size: 1.1rem;
+  list-style-type: disc;
+  text-align: left;
+  margin: -4rem 0 2rem 5rem;
+
+  &--ol {
+    list-style-type: none;
+    margin: -2rem 1.5rem 2rem 3rem;
+
+    li {
+      margin-bottom: 0.8rem;
+    }
+  }
+
+  &--subList {
+    margin: 1rem 0 1rem 1.2rem;
+  }
+}
+
+.p--center {
+  width: 80%;
+  max-width: 700px;
+  margin-bottom: 3rem;
+}
+
+// prism coding styles
+pre[class*='language-'] {
+  margin: 5rem auto 4rem auto !important;
+  width: 90%;
+}
+
+// pug code example
+.showCode {
+  display: block;
+
+  &.first {
+    margin: 1rem 1rem 0 1rem;
+  }
+
+  &.second {
+    margin: 0 1rem 0 1.5rem;
+  }
+
+  &.span {
+    margin: 0 1rem 0 2rem;
+  }
+
+  &.code {
+    margin: 0 1rem 0 2.5rem;
+
+    &.last {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.form {
+  text-align: left;
+  margin: 1rem auto 5rem auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+
+  &__h2 {
+    text-align: center;
+    margin: 5rem 0 0 0;
+    letter-spacing: 0.1rem;
+  }
+
+  &__fieldset {
+    border: none;
+    position: relative;
+  }
+
+  .input {
+    position: relative;
+
+    &__textInput {
+      display: block;
+      font-size: 1.2rem;
+      margin: 0 0 3rem 0;
+      padding: 0.8rem 0 0.5rem 0.8rem;
+      width: 100%;
+      border: 1px solid $blackColor;
+      border-radius: 5px;
+
+      transition: background-color 300ms ease-in-out;
+
+      &--hidden {
+        display: none;
+      }
+
+      &--subjectField {
+        -moz-appearance: menulist;
+        -webkit-appearance: menulist;
+      }
+
+      &__textarea {
+        resize: none;
+        width: 100%;
+      }
+
+      &__label {
+        display: block;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        font-size: 0;
+
+        &--mailingListForm {
+          display: inline;
+          opacity: 1;
+          position: initial;
+          font-size: initial;
+          margin: 0 0 0 0.5rem;
+        }
+      }
+
+      &:focus::placeholder {
+        border: none;
+        transition: border 400ms ease-in-out;
+      }
+
+      &:focus {
+        outline: none;
+        background-color: $yellowColor;
+        box-shadow: $greyColor 1px 1px 5px;
+        border: 1px solid $orangeColor;
+        border-radius: 5px;
+        padding: 0.8rem 0 0.5rem 0.8rem;
+        transition: background-color 300ms ease-in-out;
+      }
+
+      &--mailingListForm {
+        margin: 0 0 1rem 0;
+      }
+    }
+
+    &__textInput__submitButton {
+      font-family: $fontCustom;
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      border: none;
+      margin: 2rem auto;
+      padding: 1rem;
+      background-color: $yellowColor;
+      width: initial;
+      border: 2px solid $blackColor;
+      border-radius: 5px;
+      transition: 0.5s;
+
+      &:hover,
+      &:focus {
+        background-color: $blackColor;
+        color: $whiteColor;
+        border: 2px solid $blackColor;
+        // box-shadow: $yellowColor 1px 1px 15px 1px;
+      }
+
+      &:focus {
+        padding: 1rem;
+      }
+
+      &:active {
+        transform: translateY(2px);
+      }
+
+      &--mailingListForm {
+        margin: 2rem 0 0 0;
+      }
+    }
+  }
+
+  &--mailingListForm {
+    @include clearfix;
+
+    width: initial;
+    margin: 1rem 2rem 5rem 2rem;
+  }
+}
+
+#checkboxConfirm {
+  margin-left: 0.5rem;
+}
+
+.input__textInput__label--mailingList {
+  font-size: 1.3rem;
+  margin-left: 0.5rem;
+}
+
+.input__textInput::placeholder {
+  font-size: 1.1rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  color: $blackColor;
+  opacity: 1;
+}
+
+.input__textInput:placeholder-shown + .input__textInput__label {
+  visibility: hidden;
+  z-index: -1;
+}
+
+.input__textInput:not(:placeholder-shown) + .input__textInput__label,
+.input__textInput:focus:not(:placeholder-shown) + .input__textInput__label {
+  font-size: 1rem;
+  visibility: visible;
+  z-index: 1;
+  opacity: 1;
+  top: -25px;
+  text-transform: uppercase;
+  border-bottom: 1px solid lighten($blackColor, 30%);
+  color: lighten($blackColor, 30%);
+  transition: opacity 150ms ease-in-out 150ms, top 450ms ease-in-out;
+}
+
+.input__message {
+  color: $blackColor;
+  padding: 0.5rem 1rem;
+  // background-color: $orangeColor;
+  border-radius: 5px;
+  margin: 0 0 0.5rem 0;
+  width: 95%;
+}
+
+.twitter-share-button {
+  margin: 0;
+  padding: 0;
+}
+
+.span__date {
+  display: block;
+  text-align: left;
+  padding: 2rem 0 0.5rem 0;
+}
+
+.blog__image {
+  width: 100%;
+  max-width: 650px;
+  margin: 1rem 2rem 3rem 1rem;
+  float: left;
+
+  &--cssscan {
+    max-width: 300px;
+  }
+
+  &--gitBottom {
+    max-width: 300px;
+  }
+
+  &--skipLink {
+    max-width: initial;
+  }
+
+  &--exampleText {
+    width: 85%;
+    max-width: 500px;
+    margin-left: 3rem;
+    border-radius: 10px;
+  }
+}
+
+@mixin main--ms {
+  // 600
+  article {
+    p {
+      margin: 0 auto;
+      // width: 550px;
+      // max-width: 600px;
+    }
+  }
+
+  .h2 {
+    font-size: 2rem;
+    padding: 5rem 0 1.5rem 0;
+
+    &--index {
+      padding-bottom: 5rem;
+    }
+  }
+
+  .h3 {
+    &--right {
+      text-align: center;
+      margin: 2rem 0 0.5rem 12rem;
+    }
+  }
+
+  main {
+    form {
+      display: block;
+      margin: 0 auto 3rem auto;
+      width: 550px;
+      // max-width: 600px;
+    }
+  }
+
+  .align {
+    @include clearfix;
+    margin-top: 3rem;
+  }
+
+  .index__image {
+    margin: 0;
+    // margin-top: -2.5rem;
+    margin-bottom: 2.5rem;
+
+    &:first-child {
+      margin: 0;
+    }
+  }
+
+  .p__left--index {
+    float: left;
+    width: 60%;
+  }
+
+  .p__right--index {
+    float: right;
+    width: 60%;
+  }
+
+  .p__right--freeTest {
+    float: right;
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+
+  .link__button {
+    float: right;
+    margin: 4rem 3rem 0 0;
+    width: 30%;
+    max-width: 500px;
+  }
+
+  // prism coding styles
+  pre[class*='language-'] {
+    margin: 0 3rem 0 0 !important;
+    float: right;
+    width: 30%;
+    word-break: break-all !important;
+    word-wrap: break-word !important;
+    overflow: hidden !important;
+
+    &.blog {
+      width: 70%;
+      float: none;
+      margin: 2rem 1rem 3rem 3rem !important;
+    }
+  }
+}
+
+@mixin main--m {
+  // 768
+
+  .form {
+    &--mailingListForm {
+      margin: 2rem auto 6rem auto;
+    }
+  }
+
+  .section__blog {
+    margin-right: 4.5rem;
+  }
+
+  .article--blog {
+    margin-top: 6rem;
+  }
+
+  .blog__flag {
+    margin: 0 0 2rem 0.5rem;
+  }
+
+  .align {
+    @include clearfix;
+    margin-top: 1rem;
+  }
+
+  .p__left {
+    float: left;
+    width: 60%;
+
+    &--blog {
+      width: 80%;
+      margin: 1rem 0 0 0;
+    }
+
+    &--example {
+      width: 70%;
+      margin: 2rem 0 1rem 3rem;
+    }
+  }
+
+  .h3 {
+    &--right {
+      text-align: center;
+      margin: 2rem 0 0.5rem 6rem;
+    }
+  }
+
+  .p__right {
+    width: 60%;
+    float: right;
+    &--freeTest {
+      width: 100%;
+    }
+  }
+
+  .quickscan__numbered__list {
+    margin: -4rem 11rem 2rem 0rem;
+  }
+}
+
+@mixin main--l {
+  //1200
+  .link__button {
+    &--cta {
+      margin-top: 1rem;
+    }
+  }
+
+  .quickscan__numbered__list {
+    margin: -4rem 11rem 2rem 7rem;
+  }
+}

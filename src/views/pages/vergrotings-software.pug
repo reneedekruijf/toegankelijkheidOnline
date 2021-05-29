@@ -1,0 +1,47 @@
+extends ../layout/layout
+include ../mixins/blogNav
+
+block prepend head
+    - var page = "vergrotingssoftware"
+    - var title = "vergrotingssoftware"
+    - var description = "Een aantal bezoekers gebruikt vergrotingssoftware om het web te surfen"
+    - var path = "../"
+
+block content
+  +blogNav(page)
+  //- vergrotingssoftware
+  article(class="article article--blog")     
+    div.align
+      h2.h2.h2--blog vergrotingssoftware
+      p(class="p p__left p__left--blog") 
+        strong.p__firstWord  Mensen 
+        | die slecht zien hebben de mogelijkheid om vergrotingssoftware te gebruiken. Ze kunnen met deze software inzoomen op alles wat er te zien is op een beeldscherm. De navigatie vindt dan meestal met de muis plaats. Als je ingezoomd bent dan moet je van boven naar beneden en van links naar rechts scrollen om de hele pagina te kunnen bekijken. Voor developers en websitemakers zijn er een paar punten om rekening mee te houden voor mensen die op deze wijze het internet gebruiken. 
+      p(class="p p__left p__left--blog")
+        | Als je ingezoomd een website bekijkt en de site is heel druk dan dis navigeren voor deze bezoekers heel lastig. Een kalm en rustig ontwerp is dan erg prettig.
+      p(class="p p__left p__left--blog")
+        | Doordat ze ingezoomd is er natuurlijk maar een klein deel van de website zichtbaar hierdoor moeten ze veel scrollen en met name van links naar rechts. Dit kan best vermoeiend zijn. Daarom is het handig om zinnen niet te lang te maken en teksten is kolommen te zetten. Een ander punt is dat zoeken naar, bijvoorbeeld een menu lastig is. Voor deze mensen is het handig als belangrijke items op een logische en vaste plaats staat. Het menu is een van deze belangrijke items. Dit staat meestal bovenaan, de meeste bezoekers verwachten ook het daar te kunnen vinden.
+      p(class="p p__left p__left--blog")
+        | Vaak wordt er op websites gebruik gemaakt van hoover-tooltips. Je krijgt meer informatie te zien als je bijvoorbeeld over een foto gaat met je muis. Deze informatie verdwijnt weer als je er vanaf gaat met je muis. Je kunt je voorstellen dat iemand die heel erg ingezoomd is op deze hoover-link niet alle informatie ziet maar slecht een klein hoekje. Als je hij met zijn muis nu naar de informatie wil gaan dan verdwijnt deze informatie omdat zijn muis niet meer op het hoover-object staat. Dus dit soort informatie moet slechts een aanvulling zijn maar mag niet heel belangrijk zijn. Anders missen sommige mensen deze informatie. Je kunt er voor kiezen om dit dan (ook) op een andere manier aan te bieden. 
+      p(class="p p__left p__left--blog p__left--tooltip")
+        a(href="#" class="link hooverToolTip__poppup--link") Dit is een belangrijke link
+          span.hooverToolTip__poppup Deze tekst is zichtbaar als je over de link hovert maar verdwijnt weer als je met de muis de link verlaat. Iemand die erg ingezoomd is op de link zal deze informatie niet kunnen lezen.
+      p(class="p p__left p__left--blog")
+        | Ook zoekfilters kunnen lastig zijn. Aan de linkerkant heb je opties om zoekresultaten te verfijnen. Je kunt een checkbox aanvinken waardoor er in het midden van de pagina iets verandert in de resultaten. Als je ingezoomd bent zie je niet dat er iets verandert is. Een oplossing kan zijn dat je de opties die je aanvinkt moet bevestigen. Zo weet de gebruiker dat er pas iets verandert als hij op die button klikt.
+      p(class="p p__left p__left--blog")
+        | Een responsive website is ook vaak een uitkomst. Vaak hebben de kleinere versies van een website tekts in kolommen. Op deze manier hoef je dan minder van links naar rechts te scrollen (als je erg ingezoomd bent) maar kun je gemakkelijk van boven naar beneden lezen. Ga maar eens naar de 
+        a(href="../index.pug") homepage 
+        | van deze site. De paragraaf over testen bestaat uit 2 kolommen. De kolom voor de button en de kolom voor de tekst. Als je nou je het venster nou verkleint dan zie je dat het 1 kolom wordt. De button komt boven de tekst te staan. Iemand die vergrotingssoftware gebruikt hoeft niet meer van links naar rechts te scrollen maar kan gewoon van boven naar beneden lezen.
+        span(class="span__date") Gepubliceerd op 4 mei 2020 door Renee de Kruijf 
+        a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="vergrotingssoftware" data-show-count="false") Tweet
+  
+  
+
+block script
+  script(async src="https://platform.twitter.com/widgets.js" charset="utf-8")
+  script(src=`${path}../js/main.js`)
+  script(async src="https://www.googletagmanager.com/gtag/js?id=UA-63079670-2")
+  script
+    | window.dataLayer = window.dataLayer || [];
+    | function gtag(){dataLayer.push(arguments);}
+    | gtag('js', new Date());
+    | gtag('config', 'UA-63079670-2', { 'anonymize_ip': true });

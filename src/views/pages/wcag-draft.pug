@@ -1,0 +1,52 @@
+extends ../layout/layout
+include ../mixins/blogNav
+
+block prepend head
+    - var page = "wcag-draft"
+    - var title = "wcag 2.2 draft"
+    - var description = "WCAG 2.2 draft voor review"
+    - var path = "../"
+
+block content
+  +blogNav(page)
+  //- wcag 2.2 draft  
+  article(class="article article--blog")     
+    div.align
+      h2.h2.h2--blog WCAG 2.2 draft
+      p(class="p p__left p__left--blog") 
+        strong.p__firstWord Alles 
+        | op het internet is onderhevig aan verandering of met andere woorden het internet wordt steeds beter en gebruiksvriendelijker. Dit geldt ook voor de richtlijnen voor toegankelijkheid. Deze richtlijnen zorgen er voor dat een website door iedereen kan worden gebruikt. Niet iedereen gebruikt een muis, er zijn ook mensen die door een beperking (lichamelijk of geestelijk) andere apparaten gebruiken om een website te bezoeken. Denk aan een toetsenbord, een screenreader of een brailleregel (er zijn veel meer apparaten). 
+      h3.h3.h3--blog Web Content Accessibility Guidelines            
+      p(class="p p__left p__left--blog") 
+        | De WCAG of de Web Content Accessibility Guidelines zijn richtlijnen die ontwerpers en bouwers kunnen gebruiken om er voor te zorgen dat digitale middelen toegankelijk zijn voor iedereen. Ze worden opgesteld door de Accessibility Guidelines Working Group. Deze richtlijnen worden zo nu en dan herzien. Op dit moment gebruiken we WCAG 2.1 maar WCAG 2.2 is nu dus in de maak. Of eigenlijk is het een zogenaamde working draft.Het is een voorstel en iedereen mag er tot een bepaalde datum ( 18 september 2020) zijn mening over geven. Daarna worden ze definitief.
+      p(class="p p__left p__left--blog") 
+        | De WCAG is opgebouwd uit 4 principes:
+      ol.blog__numbered__list
+        li Waarneembaar
+        li Bedienbaar
+        li Begrijpelijk
+        li Robuust
+      p(class="p p__left p__left--blog") 
+        | Elk principe bestaat vervolgens uit een aantal richtlijnen. Zo vind je onder het principe Waarneembaar de volgende richtlijnen: Tekstalternatieven (1.1), Op tijd gebaseerde media (1.2), Aanpasbaar (1.3), Onderscheidbaar (1.4).
+        | Elke richtlijn is verder onderverdeeld in een aantal succescriteria. Deze succescriteria zijn belangrijk, want daar wordt een website, app of online document op getoetst.
+      h3.h3.h3--blog drie Niveau’s
+      p(class="p p__left p__left--blog") 
+        | Verder is de WCAG onderverdeeld in 3 niveaus: A, AA en AAA. Hierbij geldt in het algemeen dat aan succescriteria op niveau A relatief makkelijk te voldoen is. Succescriteria op niveau AAA zijn relatief moeilijk te behalen en zijn gericht op een geringe groep mensen met een functiebeperking. Voor (semi)overheden in Nederland geldt dat zij minimaal moeten voldoen aan niveau AA.
+      h3.h3.h3--blog Meer informatie
+      p(class="p p__left p__left--blog")
+        | Wil je weten wat de veranderingen precies inhounden dan kun je een kijkje nemen op  
+        a(href="https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/") what's New in WCAG 2.2 Working Draft
+        |  wil je ook je mening geven over de nieuwe criteria dan kun je terecht op 
+        a(href="https://www.w3.org/blog/2020/08/wcag22-wide-review/") web content accessibility guidelines (WCAG) 2.2 draft for review
+      p(class="p p__left p__left--blog")
+        span(class="span__date") Gepubliceerd op 16 augustus 2020 door Renee de Kruijf 
+        a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="wcagdraft" data-show-count="false") Tweet
+block script
+  script(async src="https://platform.twitter.com/widgets.js" charset="utf-8")
+  script(src=`${path}../js/main.js`)
+  script(async src="https://www.googletagmanager.com/gtag/js?id=UA-63079670-2")
+  script
+    | window.dataLayer = window.dataLayer || [];
+    | function gtag(){dataLayer.push(arguments);}
+    | gtag('js', new Date());
+    | gtag('config', 'UA-63079670-2', { 'anonymize_ip': true });

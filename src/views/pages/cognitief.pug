@@ -1,0 +1,42 @@
+extends ../layout/layout
+include ../mixins/blogNav
+
+block prepend head
+    - var page = "cognitief"
+    - var title = "cognitieve stoornis"
+    - var description = " Een cognitieve stoornis kan problemen opleveren met het geheugen, taal, gedrag en het oplossen van problemen."
+    - var path = "../"
+
+block content
+  +blogNav(page)
+    //- Cognitiefe stoornis
+  article(class="article article--blog")     
+    div.align
+      h2.h2.h2--blog cognitieve stoornis
+      p(class="p p__left p__left--blog") 
+        strong.p__firstWord  Cognitieve 
+        | functies worden ook wel ‘kennende functies’ genoemd. Hiermee worden functies bedoelt die te maken hebben met het verwerken van informatie en iemand in staat stellen tot leren. Voorbeelden hiervan zijn:  aandacht en concentratie, oriëntatie, waarnemen, denken, inprenten, herinneren, plannen maken, problemen oplossen, handelen, vaardigheden, het nemen van initiatieven en inzicht in de eigen situatie. Een cognitieve stoornis is een stoornis in een of meer cognitieve functies. Dit kan problemen opleveren met het geheugen, taal, gedrag en het oplossen van problemen. 
+      p(class="p p__left p__left--blog")
+        | Een cognitieve stoornis kan tijdelijk of blijvend zijn. Tijdelijke cognitieve stoornissen komen bijvoorbeeld voor bij psychische problemen zoals depressie. Ook kunnen ze een lichamelijke oorzaak hebben, bijvoorbeeld een ontregelde stofwisseling of een blaas- of longontsteking. Vooral oudere mensen zijn hier gevoelig voor. Voorbeelden van blijvende stoornissen zijn de diverse vormen van dementie, de ziekte van Korsakov en de gevolgen van ander niet aangeboren hersenletsel.
+      p(class="p p__left p__left--blog")
+        | Vanzelfsprekend gebruiken mensen die deze problemen hebben ook het internet. Ze kunnen tegen diverse problemen aanlopen als het om het navigeren van een website gaat. Ook kan het zijn dat ze gebruik maken van andere technologie om een website te bezoeken. Belangrijk is om te beseffen dat iedereen uniek is in wat hij of zij nodig heeft om op een prettige en doeltreffende manier informatie te kunnen vinden op het internet.
+      p(class="p p__left p__left--blog")
+        | Het is belangrijk om er voor te zorgen dat websites niet overmatig complex zijn. De navigatie moet zo simpel mogelijk zijn, een bezoeker moet informatie makkelijk en snel kunnen vinden.  Het grote belang van een responsive website is hier ook weer van toepassing, mensen kunnen dan kiezen hoe ze de aangeboden informatie willen bekijken. Vaak als mensen bepaalde content niet kunnen vinden dan maken ze de website kleiner zodat hij er uit komt te zien zoals op een mobiele telefoon. Vaak is er op een smaller versie van de website veel van de, vaak onbelangrijke, informatie weggelaten en is de tekst in een enkele kolom gezet. De site is nu makkelijker te navigeren en een stuk overzichtelijker. Voor iemand die moeite heeft met scrollen is dit echter geen goede oplossing.
+      p(class="p p__left p__left--blog")
+        | Vaak passen bezoekers de site zelf aan. Ze passen bijvoorbeeld de grote van de lettertypes aan of de ruimte tussen de letters of regels. Ook kleuren worden vaak aangepast zodat tekst beter leesbaar wordt.
+      p(class="p p__left p__left--blog")
+        | Afbeeldingen zeggen vaak meer dan woorden maar ze kunnen ook voor afleiding zorgen. Te veel afbeeldingen, wel of niet afgewisseld met tekst, kan voor veel bezoekers afleidend werken. Een goede balans in het gebruik van afbeeldingen is dat ook prettig voor deze bezoekers. De betekenis van iconen is ook niet altijd voor iedereen duidelijk. Zorg dus voor bekende of duidelijk iconen, het beste is om ze in combinatie met een tekstalternatief te gebruiken.
+      p(class="p p__left p__left--blog")
+        | Te veel beweging of animaties kunnen ook voor veel bezoekers een probleem vormen. Als het kan is het beter om dit soort content te vermijden. Het gaat dan om image-sliders, pop-ups, audio of video die vanzelf begint te spelen, flikkerende elementen en noem maar op. Wil je ze wel gebruiken zorg dan dat ze niet uit automatisch beginnen te bewegen of te spelen en geef bezoekers zelf de mogelijkheid ze te starten en te stoppen.
+        span(class="span__date") Gepubliceerd op 12 mei 2020 door Renee de Kruijf 
+        a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="cognitievestoornis" data-show-count="false") Tweet
+  
+block script
+  script(async src="https://platform.twitter.com/widgets.js" charset="utf-8")
+  script(src=`${path}../js/main.js`)
+  script(async src="https://www.googletagmanager.com/gtag/js?id=UA-63079670-2")
+  script
+    | window.dataLayer = window.dataLayer || [];
+    | function gtag(){dataLayer.push(arguments);}
+    | gtag('js', new Date());
+    | gtag('config', 'UA-63079670-2', { 'anonymize_ip': true });

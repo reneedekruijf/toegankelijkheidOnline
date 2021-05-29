@@ -1,0 +1,10 @@
+//primary colors
+$orangeColor: #f39200;
+$yellowColor: rgb(255, 231, 85);
+$yellowColorLight: rgba(251, 237, 144, 0.2);
+$blackColor: #020202;
+$whiteColor: rgb(251, 248, 248);
+$greyColor: lighten($blackColor, 50%);
+
+// fonts:
+$fontCustom: 'Arimo', Arial, Helvetica, sans-serif;

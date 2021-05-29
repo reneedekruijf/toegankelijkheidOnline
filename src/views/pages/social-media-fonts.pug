@@ -1,0 +1,61 @@
+extends ../layout/layout
+include ../mixins/blogNav
+
+block prepend head
+    - var page = "fonts"
+    - var title = "social media fonts"
+    - var description = "Het gebruik van afwijkende fonts op social media kan problemen geven voor mensen met een screenreader"
+    - var path = "../"
+
+block content
+  +blogNav(page)
+  //- fonts op social media
+  article(class="article article--blog")     
+    div.align
+      h2.h2.h2--blog fonts op social media
+      p(class="p p__left p__left--blog") 
+        strong.p__firstWord Ik
+        | las onlangs een 
+        a(href="https://www.linkedin.com/posts/marritpostma_leesbaarheid-toegankelijkheid-blind-activity-6667382435203940352-WOWM/") bericht
+        |  op LinkedIn van 
+        a(href="https://www.linkedin.com/in/marritpostma/") Marrit Postma
+        |  over het gebruik van andere lettertypes in berichten dan het standaard lettertype wat door de verschillende social media platformen wordt gebruikt.
+      p(class="p p__left p__left--blog")
+        | Marrit is slechtziend en maakt veel gebruik van de VoiceOver op de Iphone. Het is dus mogelijk om op social media gebruik te maken van een ander lettertype om beter op te vallen of om je berichten op te leuken.  Je kunt dan gebruik maken een website zoals bijvoorbeeld 
+        a(href="http://textconverter.net/") textconverter        
+      p(class="p p__left p__left--blog")
+        | Je typt je tekst in en je kunt gelijk uit een aantal lettertypes kiezen. Het is nu een kwestie van kopiëren en vervolgen plakken in je bericht of in je profiel. Ik heb het uitgeprobeerd op LinkedIn, Facebook en Twitter. Bij alle drie kun je gewoon een tekst maken met een ander lettertype. Het zier er leuk uit en je valt behoorlijk op.
+      p(class="p p__left p__left--blog")
+        | Maar, zo blijkt ook uit het bericht van Marrit, de tekst in een ander lettertype wordt helemaal niet voorgelezen door een screenreader. De regels worden gewoon genegeerd.
+      p(class="p p__left p__left--blog")
+        | Ik heb het zelf maar eens geprobeerd. Ik heb een bericht op LinkedIn, Twitter en Facebook gepost met een tekst als deze:
+      p(class="p p__left p__left--blog")
+        span.nextLine Dit is een normale regel. 
+        span.nextLine Dit is ook een normale regel.
+        span.nextLine 𝕯𝖎𝖙 𝖎𝖘 𝖊𝖊𝖓 𝖗𝖊𝖌𝖊𝖑 𝖎𝖓 𝖊𝖊𝖓 𝖆𝖓𝖉𝖊𝖗 𝖑𝖊𝖙𝖙𝖊𝖗𝖙𝖞𝖕𝖊
+        span.nextLine 𝔻𝕚𝕥 𝕚𝕤 𝕟𝕠𝕘 𝕖𝕖𝕟 𝕣𝕖𝕘𝕖𝕝 𝕚𝕟 𝕖𝕖𝕟 𝕒𝕟𝕕𝕖𝕣 𝕝𝕖𝕥𝕥𝕖𝕣𝕥𝕪𝕡𝕖
+        span.nextLine Dit is weer een normale regel
+        span.nextLine en dit is de laatste normale regel
+      p(class="p p__left p__left--blog")
+        | Ik heb de tekst laten voorlezen op een Iphone (met de standaard ingebouwde VoiceOver) op een laptop met 
+        a(href="https://www.nvaccess.org/ ") NVDA
+        |  en met 
+        a(href="https://chrome.google.com/webstore/detail/chromevox-classic-extensi/kgejglhpjiefppelpmljglcjbhoiplfn?hl=nl") ChromeVox
+        |  (een chrome extensie). Alleen ChromeVox las de zinnen in een ander lettertype voor de beide andere screenreaders  sloegen de zinnen over. De screenreaders lijken wel te zien dat er een zin staat maar lezen niks voor totdat je weer bij de volgende normale zin komt. 
+      p(class="p p__left p__left--blog")
+        | Er zijn zeer veel mensen die het op het internet surfen door middel van een screenreader, zij maken ook gebruik van social media met een screenreader. Als je wilt dat je boodschap aankomt bij iedereen, dus ook bij mensen die een screenreader gebruiken, kijk dan uit met te veel andere lettertypes in je berichten. 
+      p(class="p p__left p__left--blog")
+        | Wil je toch gebruik maken van andere lettertypes? Dan kun je het bericht er eventueel twee keer opzetten zodat iedereen het bericht kan lezen.
+        span(class="span__date") Gepubliceerd op 17 mei 2020 door Renee de Kruijf 
+        a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="fontssocialmedia" data-show-count="false") Tweet
+  
+  
+block script
+  script(async src="https://platform.twitter.com/widgets.js" charset="utf-8")
+  script(src=`${path}../js/main.js`)
+  script(async src="https://www.googletagmanager.com/gtag/js?id=UA-63079670-2")
+  script
+    | window.dataLayer = window.dataLayer || [];
+    | function gtag(){dataLayer.push(arguments);}
+    | gtag('js', new Date());
+    | gtag('config', 'UA-63079670-2', { 'anonymize_ip': true });

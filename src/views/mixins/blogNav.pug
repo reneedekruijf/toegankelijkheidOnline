@@ -1,0 +1,70 @@
+mixin blogNav(page)
+
+  aside.blog__nav
+    ul.blog__nav__list
+      li.blog__nav__list__item
+        a(href=("responsive.pug") class=(page == "responsive" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) responsive
+      li.blog__nav__list__item
+        a(href=("frustraties.pug") class=(page == "frustraties" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) frustraties
+      //- li.blog__nav__list__item
+      //-   a(href=("opslag.pug") class=(page == "opslag" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) opslag
+      li.blog__nav__list__item
+        a(href=("criteria.pug") class=(page == "criteria" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) Nieuwe criteria
+      li.blog__nav__list__item
+        a(href=("wcag.pug") class=(page == "wcag" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) WCAG
+      li.blog__nav__list__item
+        a(href=("cms.pug") class=(page == "cms" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) CMS
+      li.blog__nav__list__item
+        a(href=("menu.pug") class=(page == "menu" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) menu
+      li.blog__nav__list__item
+        a(href=("verbergen.pug") class=(page == "verbergen" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) verbergen
+      li.blog__nav__list__item
+        a(href=("slider.pug") class=(page == "slider" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) image-slider
+      li.blog__nav__list__item
+        a(href=("animatie.pug") class=(page == "animatie" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) animatie
+      li.blog__nav__list__item
+        a(href=("validate.pug") class=(page == "validate" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) HTML valideren
+      li.blog__nav__list__item
+        a(href=("social-media-fonts.pug") class=(page == "fonts" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) fonts social media
+      li.blog__nav__list__item
+        a(href=("cognitief.pug") class=(page == "cognitief" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) cognitieve stoornis
+      li.blog__nav__list__item
+        a(href=("vergrotings-software.pug") class=(page == "vergrotingssoftware" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) vergrotingssoftware
+      //- li.blog__nav__list__item
+      //-   a(href=("cli.pug") class=(page == "cli" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) CLI
+      li.blog__nav__list__item
+        a(href=("lang-attribuut.pug") class=(page == "langattribuut" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) lang-attribuut
+      li.blog__nav__list__item
+        a(href=("html.pug") class=(page == "html" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) HTML 
+      //- li.blog__nav__list__item
+      //-   a(href=("Klikbare-koptekst-met-javascript.pug") class=(page == "klikbarekoptekst" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) klikbare kop 
+      //- li.blog__nav__list__item
+      //-   a(href=("heading.pug") class=(page == "heading" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) heading 
+      li.blog__nav__list__item
+        a(href=("contrast.pug") class=(page == "contrast" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) contrast 
+      li.blog__nav__list__item
+        a(href=("target-blank.pug") class=(page == "targetBlank" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) target_blank 
+      li.blog__nav__list__item
+        a(href=("toegankelijkheid.pug") class=(page == "toegankelijkheid" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) toegankelijkheid 
+      li.blog__nav__list__item
+        a(href=("skip-link.pug") class=(page == "skipLink" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) skip link 
+      //- li.blog__nav__list__item
+      //-   a(href=("code-in-html.pug") class=(page == "codeInHtml" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) code in HTML 
+      li.blog__nav__list__item
+        a(href=("link-of-button.pug") class=(page == "linkOfButton" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) link of button 
+      li.blog__nav__list__item
+        a(href=("tab-toets.pug") class=(page == "tabToets" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) Toetsenbord - TAB 
+      li.blog__nav__list__item
+        a(href=("digitoegankelijk.pug") class=(page == "digitoegankelijk" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) digitoegankelijk 
+      li.blog__nav__list__item
+        //- a(href=("focus-met-javascript.pug") class=(page == "focusMetJs" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) focus met JS 
+      li.blog__nav__list__item
+        //- a(href=("focus-within.pug") class=(page == "focusWithin" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) :focus-within 
+      //- li.blog__nav__list__item
+      //-   a(href=("git-log-oneline.pug") class=(page == "gitOneline" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) git log --oneline 
+      //- li.blog__nav__list__item
+      //-   a(href=("cssscan.pug") class=(page == "cssScan" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) cssscan 
+      //- li.blog__nav__list__item
+      //-   a(href=("polypane.pug") class=(page == "polypane" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) Polypane 
+      //- li.blog__nav__list__item
+      //-   a(href=("figma.pug") class=(page == "figma" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) Figma 

@@ -1,0 +1,21 @@
+html {
+  font-size: 100%;
+  height: 100%;
+  line-height: 1.5;
+}
+
+body {
+  background-color: $whiteColor;
+  font-family: $fontCustom;
+  position: relative;
+  min-height: 100%;
+}
+
+.pageWrapper {
+  max-width: 1200px;
+  position: relative;
+  clear: both;
+  overflow: hidden;
+  margin: 0 auto;
+  // z-index: 1;
+}

@@ -1,0 +1,44 @@
+extends ../layout/layout
+include ../mixins/blogNav
+
+block prepend head
+    - var page = "langattribuut"
+    - var title = "lang-attribuut"
+    - var description = "Geef aan in welke taal je pagina is met het lang attribuut"
+    - var path = "../"
+
+block content
+  +blogNav(page)
+  //- lang attribuut
+  article(class="article article--blog")     
+    div.align
+      h2.h2.h2--blog lang attribuut
+      p(class="p p__left p__left--blog") 
+        strong.p__firstWord Elke 
+        | pagina op het web heeft een &lt;html&gt;&lt;/html&gt; tag. Hiertussen kun je alle ander tags kwijt. Heel belangrijk bij deze tag is het lang-attribuut. Heb jij een pagina die geheel in het Nederlands is geschreven zorg er dan voor dat dit lang-attribuut ingesteld staan op Nederlands. Dat ziet er zo uit: &lt;html lang="nl"&gt;. Dit is belangrijk voor bezoekers die een screenreader gebruiken. Het is ook belangrijk  voor zoekmachines en Browsers. De screenreader weet dan dat deze pagina voor het overgrote deel in het Nederlands is opgesteld. De screenreader leest dan de pagina in het Nederlands voor. Als je dit weglaat dan kan het zijn dat de website in een andere taal wordt voorgelezen. 
+      p(class="p p__left p__left--blog")
+        Als het attribuut op, bijvoorbeeld DE staat dan zal de pagina in het Duits worden voorgelezen. De code kan ook uit twee delen bestaan, bijvoorbeeld: nl-be. Dit wil zeggen dat het om een Vlaamse pagina gaat. Weet je niet welke afkortingen je moet gebruiken? Kijk dan in de 
+        a(href="https://www.w3schools.com/tags/ref_language_codes.asp") lijst met taalcodes
+        |  of de 
+        a(href="https://www.w3schools.com/tags/ref_country_codes.asp") lijst met landcodes
+        |.
+      p(class="p p__left p__left--blog")
+        | Stel je hebt in je Nederlandse pagina een paragraaf met Engelse tekst. Dan kun je dit attribuut ook op de &lt;p&gt; tag gebruiken waartussen dan de Engelse tekst staat. Dat word dan: &lt;p lang="en"&gt;&lt;/p&gt;. Een screenreader weet dan dat deze tekst in het Engels voor moet worden gelezen. Dit kan ook met een woord. Dit woord zet je tussen een &lt;span lang="en"&gt; of met een link-tag. Dat wordt dan &lt;a lang="en" href="https://global.com">Global&lt;/a&gt;.
+      p(class="p p__left p__left--blog")
+        | Kijk op de pagina's van 
+        a(href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang") Mozilla devlopers network (MDN)
+        |  voor meer informatie over het lang attriubuut.
+        span(class="span__date") Gepubliceerd op 19 april 2020 door Renee de Kruijf 
+        a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="langattribute" data-show-count="false") Tweet
+  
+
+
+block script
+  script(async src="https://platform.twitter.com/widgets.js" charset="utf-8")
+  script(src=`${path}../js/main.js`)
+  script(async src="https://www.googletagmanager.com/gtag/js?id=UA-63079670-2")
+  script
+    | window.dataLayer = window.dataLayer || [];
+    | function gtag(){dataLayer.push(arguments);}
+    | gtag('js', new Date());
+    | gtag('config', 'UA-63079670-2', { 'anonymize_ip': true });
