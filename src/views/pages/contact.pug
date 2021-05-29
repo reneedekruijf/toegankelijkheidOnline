@@ -7,13 +7,13 @@ block prepend head
     - var path = "../"
 
 block content
-  a(href="../pages/contact-verzonden.pug" class="hidden") 
-  a(href="../pages/contact-niet-verzonden.pug" class="hidden") 
-  article(class="article")
-    h2(class="h2") contact / aanvraag
-    p(class="p p--center") Wil je meer weten? Wil je je site laten testen? Of wil je een afspraak maken? Vul onderstaand formulier in en ik neem zo snel mogelijk contact met je op!
+    a(href="../pages/contact-verzonden.pug" class="hidden") 
+    a(href="../pages/contact-niet-verzonden.pug" class="hidden") 
+    article(class="article")
+        h2(class="h2") contact / aanvraag
+        p(class="p p--center") Wil je meer weten? Wil je je site laten testen? Of wil je een afspraak maken? Vul onderstaand formulier in en ik neem zo snel mogelijk contact met je op!
     //- p(class="p p--center") Velden met een * zijn verplicht!
-  form(
+    form(
         method="post" 
         action="../php/formmailContact.php" 
         enctype="multipart/form-data" 
@@ -133,7 +133,6 @@ block content
                     name="insturen" 
                     type="submit" 
                     class="input__textInput input__textInput__submitButton") versturen
-block script
     script(src=`${path}../js/formvalidate.js`)
     //- script(src=`${path}../js/main.js`)
 
