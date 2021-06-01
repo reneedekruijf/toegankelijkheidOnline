@@ -30,12 +30,5 @@ block content
         | Deze code heeft wel degelijk nut. Als je namelijk wilt dat de tekst over de afbeeldingen wordt voorgelezen dan zorgt dit stukje code er voor dat dat automatisch gebeurt als de volgende afbeelding getoond wordt. Dat is wel handig. Maar het is niet handig als dit gebeurt als je iets anders aan het lezen bent. Hier is een hele simpele oplossing voor! Zorg dat de bezoeker de beweging kan stoppen en dat hij handmatig door de afbeeldingen kan scrollen door middel van buttons. Dit is een simpele oplossing waarmee je website voor alle bezoekers een beter ervaring geeft. 
         span(class="span__date") Gepubliceerd op 8 juni 2020 door Renee de Kruijf 
         a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="sliders" data-show-count="false") Tweet
-block script
   script(async src="https://platform.twitter.com/widgets.js" charset="utf-8")
-  script(src=`${path}../js/main.js`)
   script(async src="https://www.googletagmanager.com/gtag/js?id=UA-63079670-2")
-  script
-    | window.dataLayer = window.dataLayer || [];
-    | function gtag(){dataLayer.push(arguments);}
-    | gtag('js', new Date());
-    | gtag('config', 'UA-63079670-2', { 'anonymize_ip': true });

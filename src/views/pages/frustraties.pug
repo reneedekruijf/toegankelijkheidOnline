@@ -36,12 +36,7 @@ block content
       p(class="p p__left p__left--blog")
         span(class="span__date") Gepubliceerd op 11 november 2020 door Renee de Kruijf 
         a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="frustraties" data-show-count="false") Tweet
-block script
+
   script(async src="https://platform.twitter.com/widgets.js" charset="utf-8")
-  script(src=`${path}../js/main.js`)
   script(async src="https://www.googletagmanager.com/gtag/js?id=UA-63079670-2")
-  script
-    | window.dataLayer = window.dataLayer || [];
-    | function gtag(){dataLayer.push(arguments);}
-    | gtag('js', new Date());
-    | gtag('config', 'UA-63079670-2', { 'anonymize_ip': true });
+  

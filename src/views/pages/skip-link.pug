@@ -79,12 +79,7 @@ block content
           | Geef je nu een enter of druk je op de spatiebalk dan spring je naar de hoofdtekst en hoef je niet alle links daarboven te doorlopen. Wil je toch door alle menu-items dan TAB je gewoon door.
           span(class="span__date") Gepubliceerd op 27 februari 2020 door Renee de Kruijf 
               a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="skiplink" data-show-count="false") Tweet
-block script
+
   script(async src="https://platform.twitter.com/widgets.js" charset="utf-8")
-  script(src=`${path}../js/main.js`)
   script(async src="https://www.googletagmanager.com/gtag/js?id=UA-63079670-2")
-  script
-    | window.dataLayer = window.dataLayer || [];
-    | function gtag(){dataLayer.push(arguments);}
-    | gtag('js', new Date());
-    | gtag('config', 'UA-63079670-2', { 'anonymize_ip': true });
+  
