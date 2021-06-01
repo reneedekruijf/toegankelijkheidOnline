@@ -675,4 +675,8 @@ pre[class*='language-'] {
   .quickscan__numbered__list {
     margin: -4rem 11rem 2rem 7rem;
   }
+
+  .blog__numbered__list {
+    @include clearfix;
+  }
 }
