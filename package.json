@@ -12,10 +12,12 @@
   "license": "MIT",
   "dependencies": {
     "autoprefixer": "^9.8.6",
+    "babel-plugin-prismjs": "^2.0.1",
     "parcel-bundler": "^1.12.5",
     "prismjs": "^1.23.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.14.3",
     "parcel": "^2.0.0-nightly.688",
     "parcel-plugin-custom-dist-structure": "^1.1.18",
     "parcel-plugin-markdown-it": "^1.0.0",
