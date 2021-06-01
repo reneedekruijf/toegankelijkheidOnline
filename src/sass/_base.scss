@@ -677,6 +677,6 @@ pre[class*='language-'] {
   }
 
   .blog__numbered__list {
-    @include clearfix;
+    clear: both;
   }
 }
