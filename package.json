@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel serve ./src/views/index.pug --open",
-    "build": "parcel build ./src/views/index.pug --no-source-maps && trash dist/*.woff && trash dist/*.woff2"
+    "build": "parcel build ./src/views/index.pug --no-source-maps"
   },
   "keywords": [],
   "author": "Renee de Kruijf <renee@webdesignpuntnl.com>",
@@ -29,12 +29,12 @@
   "staticFiles": {
     "staticPath": [
       {
-        "staticPath": "src/assets",
-        "staticOutDir": "assets"
+        "staticPath": "src/pdf",
+        "staticOutDir": "pdf"
       },
       {
-        "staticPath": "src/fonts",
-        "staticOutDir": "fonts"
+        "staticPath": "src/site-image",
+        "staticOutDir": "."
       },
       {
         "staticPath": "src/php",
@@ -48,8 +48,11 @@
       ".css": "css",
       "images": [
         ".jpg",
-        ".png",
         ".svg"
+      ],
+      "fonts": [
+        ".woff",
+        ".woff2"
       ],
       ".fileExtension": "folder/in/dist",
       "folder/in/dist": [

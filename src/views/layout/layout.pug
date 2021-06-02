@@ -7,33 +7,29 @@ html(lang="nl")
             meta(charset="utf-8") 
             meta(name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes") 
             meta(name="robots" content="all") 
-            meta(name="copyright" content="Copyright Webdesignpuntnl Culemborg") 
+            meta(name="copyright" content="Copyright Toegankelijkheidonline Culemborg") 
 
-            meta(name="image" content="https://www.webdesignpuntnl.com/site-image.jpg")
+            meta(name="image" content="https://toegankelijkheidonline.nl/site-image.jpg")
             meta(name="description" property="og:description" content=description)
             meta(name="name" content=title)
             meta(name="author" content="Renee de Kruijf")
 
-            //- link(rel="apple-touch-icon" sizes="180x180" href=`${path}apple-touch-icon.png`)
-            //- link(rel="icon" type="image/png" sizes="32x32" href=`${path}favicon-32x32.png`)
-            //- link(rel="icon" type="image/png" sizes="16x16" href=`${path}favicon-16x16.png`)
-            //- link(rel="manifest" href=`${path}site.webmanifest`)
-            //- link(rel="mask-icon" href=`${path}safari-pinned-tab.svg` color="#5bbad5")
-            
-            meta(name="msapplication-TileColor" content="#da532c")
-            meta(name="theme-color" content="#ffffff")
+            link(rel="icon" href=`${path}../favicon/favicon.ico`)
+            link(rel="icon" href=`${path}../favicon/icon.svg` type="image/svg+xml")
+            link(rel="apple-touch-icon" href=`${path}../favicon/apple-touch-icon.png`)
+            link(rel="manifest" href=`${path}/manifest.webmanifest`)
             
             meta(name="twitter:card" content="summary")
             meta(name="twitter:title" content=title)
             meta(name="twitter:description" content=description)
             meta(name="twitter:site" content="@reneedekruijf")
             meta(name="twitter:creator" content="@reneedekruijf")
-            meta(name="twitter:image:src" content="https://www.webdesignpuntnl.com/site-image-preview.jpg")
+            meta(name="twitter:image:src" content="https://toegankelijkheidonline.nl/site-image-preview.jpg")
             
             meta(name="title" property="og:title" content=description)
             meta(property="og:type" content=`${type ? type : "Website"}`)
-            meta(name="image" property="og:image" content="https://www.webdesignpuntnl.com/site-image-preview.jpg")
-            meta(name="og:url" content="https://www.webdesignpuntnl.com")
+            meta(name="image" property="og:image" content="https://toegankelijkheidonline.nl/site-image-preview.jpg")
+            meta(name="og:url" content="https://toegankelijkheidonline.nl/")
             meta(name="og:site_name" content=title)
             meta(name="og:locale" content="nl")
 
@@ -41,7 +37,7 @@ html(lang="nl")
 
             link(href=`${path}../sass/main.scss` rel='stylesheet')
 
-            title #{title} - Webdesignpuntnl
+            title #{title} - Toegankelijkheidonline
         body
             block header
                 a(class="skip-main" href="#main") spring naar de tekst
