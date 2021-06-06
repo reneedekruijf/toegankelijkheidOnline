@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "parcel serve ./src/views/index.pug --open",
-    "build": "parcel build ./src/views/index.pug --no-source-maps"
+    "start": "parcel serve src/views/index.pug --open",
+    "build": "parcel build src/views/index.pug --no-source-maps 'src/views/error_docs/*' --no-source-maps"
   },
   "keywords": [],
   "author": "Renee de Kruijf <renee@webdesignpuntnl.com>",
