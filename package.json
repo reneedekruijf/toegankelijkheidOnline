@@ -13,8 +13,7 @@
   "dependencies": {
     "autoprefixer": "^9.8.6",
     "babel-plugin-prismjs": "^2.0.1",
-    "parcel-bundler": "^1.12.5",
-    "prismjs": "^1.23.0"
+    "parcel-bundler": "^1.12.5"
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",
