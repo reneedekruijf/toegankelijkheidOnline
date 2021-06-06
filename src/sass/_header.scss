@@ -11,15 +11,15 @@ a.skip-main {
 
 a.skip-main:focus,
 a.skip-main:active {
+  position: initial;
+  float: left;
   color: $whiteColor;
   text-decoration: none;
   background-color: $orangeColor;
-  left: 0;
-  top: auto;
-  width: 50%;
+  width: 20%;
   height: auto;
   overflow: auto;
-  margin: 10px 35%;
+  margin: 2rem 0 1rem 1rem;
   padding: 5px;
   text-align: center;
   font-size: 1.2em;
@@ -27,6 +27,8 @@ a.skip-main:active {
 }
 
 .header {
+  @include clearfix;
+
   width: 100%;
   z-index: 999;
   background-color: $whiteColor;
