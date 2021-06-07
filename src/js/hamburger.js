@@ -30,7 +30,9 @@ function handleMenu(e) {
   // het menu verbergt zich als js aan staat cookie menu wordt close
   if (menuState === 'close' || !menuState) {
     newHamburgerMenu.classList.remove('change');
+    newHamburgerMenu.setAttribute('aria-expanded', 'false');
     topMenu.classList.add('hideMenu');
+    topMenu.firstChild.firstChild.focus();
     linksTopmenu.forEach(link => link.setAttribute('tabindex', '-1'));
     sessionStorage.setItem('menu', 'close');
     menuState = sessionStorage.getItem('menu');
@@ -39,18 +41,23 @@ function handleMenu(e) {
   gezet en kan dus niet meer op pagina reload gesloten worden */
     if (e) {
       newHamburgerMenu.classList.add('change');
+      newHamburgerMenu.setAttribute('aria-expanded', 'true');
       topMenu.classList.remove('hideMenu');
       linksTopmenu.forEach(link => link.removeAttribute('tabindex'));
       sessionStorage.setItem('menu', 'open');
       menuState = sessionStorage.getItem('menu');
+      window.addEventListener('keydown', closeOnEsc);
     }
   } else if (isClicked) {
     // bij nog een click gaat het menu dicht en cookie op close
     newHamburgerMenu.classList.remove('change');
+    newHamburgerMenu.setAttribute('aria-expanded', 'false');
+    newHamburgerMenu.focus();
     topMenu.classList.add('hideMenu');
     linksTopmenu.forEach(link => link.setAttribute('tabindex', '-1'));
     sessionStorage.setItem('menu', 'close');
     menuState = sessionStorage.getItem('menu');
+    window.removeEventListener('keydown', closeOnEsc);
     // const lines = newHamburgerMenu.querySelectorAll('#line');
     // lines.forEach(line => {
     //   line.style.backgroundColor = '#F39200';
@@ -58,12 +65,19 @@ function handleMenu(e) {
   }
 }
 
+function closeOnEsc(e) {
+  if (e.key === 'Escape') {
+    handleMenu(e);
+  }
+}
+
 // markup for the hamburgermenu
 const markup = `
-<button class="menuSmall change">
+<button class="menuSmall change" role="navigation">
 <span class="menuSmall__line01"></span>
 <span class="menuSmall__line02"></span>
 <span class="menuSmall__line03"></span>
+<span class="sr-only">Menu</span>
 </button>`;
 
 // put the html into the dom
