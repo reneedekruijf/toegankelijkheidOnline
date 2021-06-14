@@ -7,6 +7,7 @@ const hamburgerMenu = document.createElement('div');
 // hide the menu on pageload: shows the menu if no js
 getHamburgerMenu.parentNode.removeChild(getHamburgerMenu);
 
+
 // show/hide menu and icon on resize
 function windowResize() {
   const windowSize = window.innerWidth; // get windowsize
@@ -32,7 +33,7 @@ function handleMenu(e) {
     newHamburgerMenu.classList.remove('change');
     newHamburgerMenu.setAttribute('aria-expanded', 'false');
     topMenu.classList.add('hideMenu');
-    topMenu.firstChild.firstChild.focus();
+    // topMenu.firstChild.firstChild.focus();
     linksTopmenu.forEach(link => link.setAttribute('tabindex', '-1'));
     sessionStorage.setItem('menu', 'close');
     menuState = sessionStorage.getItem('menu');
@@ -41,6 +42,7 @@ function handleMenu(e) {
   gezet en kan dus niet meer op pagina reload gesloten worden */
     if (e) {
       newHamburgerMenu.classList.add('change');
+      topMenu.firstChild.firstChild.focus();
       newHamburgerMenu.setAttribute('aria-expanded', 'true');
       topMenu.classList.remove('hideMenu');
       linksTopmenu.forEach(link => link.removeAttribute('tabindex'));
