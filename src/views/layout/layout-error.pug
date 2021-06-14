@@ -74,13 +74,13 @@ html(lang="nl")
             footer(class="footer")
                 div(class="footer__top")
                     div(class="footer__top__adress")
-                        h3(class="footer__top__adress__heading") Webdesignpuntnl
+                        h3(class="footer__top__adress__heading") Toegankelijkheidonline
                         address
                             ul
                                 li(class="footer__top__adress__item")
-                                    a(href="tel:0031638399229" class="footer__top__adress__tel") 0638399229
-                                li(class="footer__top__adress__item")
-                                    span Industrieweg 1A 14
+                                    //- a(href="tel:0031638399229" class="footer__top__adress__tel" aria-label="telefoonnummer 0638399229") 0638399229
+                                //- li(class="footer__top__adress__item")
+                                //-     span Industrieweg 1A 14
                                 li(class="footer__top__adress__item")
                                     span Culemborg
                                 li(class="footer__top__adress__item")
@@ -91,23 +91,28 @@ html(lang="nl")
                         h3(class="footer__top__social__heading") Social Links
                         ul(class="footer__top__social__list")
                             li(class="footer__top__social__list__item")
-                                a(href="https://www.linkedin.com/in/reneedekruijf"  ) 
-                                    span(class="iconLinkedin" class="footer__top__icon footer__top__icon--linkedin") Linkedin 
+                                a(href="https://www.linkedin.com/in/reneedekruijf") 
+                                    span(class="footer__top__icon footer__top__icon--linkedin") Ga naar Linkedin 
                             li(class="footer__top__social__list__item")
-                                a(href="https://twitter.com/reneedekruijf"  )
-                                    span(class="iconTwitter" class="footer__top__icon footer__top__icon--twitter") Twitter 
+                                a(href="https://twitter.com/reneedekruijf")
+                                    span(class="footer__top__icon footer__top__icon--twitter") Ga naar Twitter 
                             li(class="footer__top__social__list__item")
-                                a(href="https://www.instagram.com/renee_de_kruijf/"  )
-                                    span(class="iconInstgram" class="footer__top__icon footer__top__icon--instagram") Instagram
+                                a(href="https://www.instagram.com/renee_de_kruijf/")
+                                    span(class="footer__top__icon footer__top__icon--instagram") Ga naar Instagram
                             li(class="footer__top__social__list__item")
-                                a(href="https://github.com/webdesignpuntnl"  )
-                                    span(class="iconGithub" class="footer__top__icon footer__top__icon--github") Github
-                //- a(class="footer__bottomLinks" href="#" id="noat-cookie-consent__setup") cookies
+                                a(href="https://github.com/webdesignpuntnl")
+                                   span(class="footer__top__icon footer__top__icon--github") Ga naar Github
                 div.footer__bottom__links
                     a(class="footer__bottomLinks" href=(`${path}pages/privacy.pug`)) privacy
                     a(class="footer__bottomLinks" href=(`${path}pages/voorwaarden.pug`)) voorwaarden
-                        //- div(class="footer__bottom")
-                            p Webdesignpuntnl 2018
+                    //- a(class="footer__bottomLinks" href="#" id="noat-cookie-consent__setup") cookies
+                    //- div(class="footer__bottom")
+                        p Webdesignpuntnl 2018
             block script
                 script(src=`${path}../js/main.js`)
-                
+                //- script(async src="https://www.googletagmanager.com/gtag/js?id=UA-63079670-2")
+                //- script
+                //-     | window.dataLayer = window.dataLayer || [];
+                //-     | function gtag(){dataLayer.push(arguments);}
+                //-     | gtag('js', new Date());
+                //-     | gtag('config', 'UA-63079670-2', { 'anonymize_ip': true });
