@@ -6,7 +6,7 @@ block prepend head
     - var description = "Toegankelijkheidonline Culemborg is gespecialiseerd in alles op het gebied van toegankelijkheid"
     - var path = ""
 
-    script 
+    //- script 
         | (function (m, a, i, l, e, r) {
         |    m['MailerLiteObject'] = e;
         |
@@ -34,6 +34,9 @@ block content
             a(href="pages/contact.pug") neem contact op!
 
     section.align
+        a(href="pages/gratispdf-niet-verzonden.pug" class="hidden") 
+        a(href="pages/gratispdf-verzonden.pug" class="hidden") 
+        a(href="pages/gratis-pdf-downloaden.pug" class="hidden") 
         p(class="p p__right p__right--index")
             strong.p__firstWord Quickscan toegankelijkheid
             | Heb je een website? En weet je niet zeker of deze of deze door iedereen op de juiste wijze kan worden bezocht en gebruikt? Laat je website dan testen op toegankelijkheid. Met een Quickscan wordt er gekeken naar een aantal belangrijke toegankelijkheidseisen. De Quickscan geeft een grove indicatie van wat er verbeterd kan worden aan de toegankelijkheid. Wil je dat je website zo toegankelijk mogelijk is dan zijn er echter veel meer punten waarop getest moet worden. Wil je meer weten over de Quickscan klik dan op de button.
@@ -85,7 +88,7 @@ block content
                                                 input(type="checkbox") 
                                                 div(class="label-description")
                                                     p Ik ga akkoord met de 
-                                                        a(href="https://www.webdesignpuntnl.com/pages/privacy.pug#") privacy verklaring
+                                                        a(href="https://www.toegankelijkheidonline.nl/pages/privacy.html") privacy verklaring
                                         div(class="ml-form-recaptcha ml-validate-required")
                                             script(src="https://www.google.com/recaptcha/api.js")
                                             div(class="g-recaptcha" data-sitekey="6Lf1KHQUAAAAAFNKEX1hdSWCS3mRMv4FlFaNslaD")
@@ -100,9 +103,8 @@ block content
                                         div(class="ml-form-successContent")
                                             h4 Thank you!
                                             p You have successfully joined our subscriber list.
-    script
-        | function ml_webform_success_3847912(){try{window.top.location.href="https://www.webdesignpuntnl.com/pages/gratispdf-verzonden.pug"}catch(n){window.location.href="https://www.webdesignpuntnl.com/pages/gratispdf-verzonden.pug"}}
-    //- <img src="https://track.mailerlite.com/webforms/o/3847912/k2u2z4?v1617286431" width="1" height="1" style="max-width:1px;max-height:1px;visibility:hidden;padding:0;margin:0;display:block" alt="." border="0">
     script(src="https://static.mailerlite.com/js/w/webforms.min.js?v0c75f831c56857441820dcec3163967c" type="text/javascript")
+    script(src="../js/mailerLite.js")
+    //- <img src="https://track.mailerlite.com/webforms/o/3847912/k2u2z4?v1617286431" width="1" height="1" style="max-width:1px;max-height:1px;visibility:hidden;padding:0;margin:0;display:block" alt="." border="0">
         
     +testimonials

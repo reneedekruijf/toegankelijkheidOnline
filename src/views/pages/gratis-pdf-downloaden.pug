@@ -1,0 +1,18 @@
+extends ../layout/layout
+
+block prepend head
+    - var page = ""
+    - var title = "Je inschrijving is bevestigd download de PDF"
+    - var description = "PDF met gratis toegankelijkheids tips"
+    - var path = "../"
+
+block content
+  section.alignsection.align
+    h2(class="h2 error__h2") Bedank voor het aanmelden!
+    img(src="../../images/mail.svg" class="error__image" alt="")
+    p(class="p error__p") 
+      | Download hier de PDF met gratis tips en trucs voor enkele veel voorkomende toegankelijkheidsproblemen. Veel leesplezier. 
+      span.nextLine.nextLine--freePDF 
+        a(href="../../pdf/gratis-tips.pdf" class="link") Gratis PDF met toegankelijkheids tips (449kb)
+
+

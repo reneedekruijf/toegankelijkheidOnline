@@ -5,25 +5,24 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel serve src/views/index.pug --open",
-    "build": "parcel build src/views/index.pug src/views/error_docs/* --no-source-maps && trash dist/error_docs/php && trash dist/error_docs/pdf"
+    "build": "parcel build src/views/index.pug src/views/error_docs/* --no-source-maps --no-cache && trash dist/error_docs/php && trash dist/__"
   },
   "keywords": [],
   "author": "Renee de Kruijf <renee@webdesignpuntnl.com>",
   "license": "MIT",
   "dependencies": {
     "autoprefixer": "^9.8.6",
-    "babel-plugin-prismjs": "^2.0.1",
     "parcel-bundler": "^1.12.5"
   },
   "devDependencies": {
-    "@babel/core": "^7.14.3",
-    "parcel": "^2.0.0-nightly.688",
+    "@babel/core": "^7.14.6",
+    "parcel": "^2.0.0-nightly.722",
     "parcel-plugin-custom-dist-structure": "^1.1.18",
     "parcel-plugin-markdown-it": "^1.0.0",
     "parcel-plugin-nuke-dist": "^1.0.1",
     "parcel-plugin-static-files-copy": "^2.6.0",
     "pug": "^3.0.2",
-    "sass": "^1.34.0"
+    "sass": "^1.35.1"
   },
   "staticFiles": {
     "staticPath": [
@@ -34,10 +33,6 @@
       {
         "staticPath": "src/php",
         "staticOutDir": "./php"
-      },
-      {
-        "staticPath": "src/pdf",
-        "staticOutDir": "pdf"
       }
     ]
   },
@@ -45,6 +40,7 @@
     "config": {
       ".js": "js",
       ".css": "css",
+      ".pdf": "pdf",
       "images": [
         ".jpg",
         ".svg"
