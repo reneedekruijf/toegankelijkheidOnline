@@ -508,13 +508,13 @@ $EMAIL_NAME = "^[-a-z0-9._]+"; /* the '^' is an important security feature! */
 
 /* Help: http://www.tectite.com/fmdoc/target_email.php */
 // $TARGET_EMAIL = array($EMAIL_NAME . "@yourhost\.com$");
-$TARGET_EMAIL = array("^info@webdesignpuntnl.com\.nl$", "^info@webdesignpuntnl\.com$$");
+$TARGET_EMAIL = array("^info@toegankelijkheidonline.nl\.nl$", "^info@toegankelijkheidonline\.nl$$");
 
 /* Help: http://www.tectite.com/fmdoc/email_addrs.php */
 $EMAIL_ADDRS = array();
 
 /* Help: http://www.tectite.com/fmdoc/def_alert.php */
-$DEF_ALERT = "info@webdesignpuntnl.com";
+$DEF_ALERT = "info@toegankelijkheidonline.nl";
 
 /* Help: http://www.tectite.com/fmdoc/site_domain.php */
 $SITE_DOMAIN = ""; /* your website domain name */
