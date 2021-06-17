@@ -42,9 +42,10 @@ html(lang="nl")
             block header
                 a(class="skip-main" href="#main") ga naar de inhoud
                 <!-- top logo -->
-                header(class="header") 
-                    a(href=`${path}index.pug` class="header_logo__link")
-                        img(src=`${path}../images/logo.svg`, width="145" height="150" alt="Toegankelijkheidonline home")
+                header(class="header")
+                    h1.header__logo__h1
+                        a(href=`${path}index.pug` class="header__logo__link")
+                            img(src=`${path}../images/logo.svg`, width="145" height="150" alt="Toegankelijkheidonline home")
                     //- a(href=`${path}pages/uses.pug` class="header__icon header__icon--tools") tools
                     //- a(href=`${path}pages/side.pug` class="header__icon header__icon--side") side
                     block navigation 
