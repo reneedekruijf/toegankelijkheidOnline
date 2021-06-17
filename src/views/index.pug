@@ -68,8 +68,8 @@ block content
                                         div(class="ml-form-checkboxRow ml-validate-required")
                                             label(class="checkbox") 
                                                 input(type="checkbox") 
-                                                div(class="label-description")
-                                                    p Ik ga akkoord met de 
+                                                span(class="label-description")
+                                                    span.agreement Ik ga akkoord met de 
                                                         a(href="https://www.toegankelijkheidonline.nl/pages/privacy.html") privacy verklaring
                                         div(class="ml-form-recaptcha ml-validate-required")
                                             script(src="https://www.google.com/recaptcha/api.js")
@@ -78,7 +78,7 @@ block content
                                         div(class="ml-form-embedSubmit")
                                             button(type="submit" class="primary") versturen
                                             button(disabled="disabled" style="display:none" type="button" class="loading")
-                                                div(class="ml-form-embedSubmitLoad")
+                                                span(class="ml-form-embedSubmitLoad")
                                                     span(class="sr-only") Loading...
                                         input(type="hidden" name="anticsrf" value="true")
                                     div(class="ml-form-successBody row-success" style="display:none")
