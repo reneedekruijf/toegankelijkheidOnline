@@ -75,12 +75,15 @@ function closeOnEsc(e) {
 
 // markup for the hamburgermenu
 const markup = `
-<button class="menuSmall change" role="navigation">
+<div role="navigation" aria-labelledby="sr">
+<button class="menuSmall change">
 <span class="menuSmall__line01"></span>
 <span class="menuSmall__line02"></span>
 <span class="menuSmall__line03"></span>
-<span class="sr-only">Menu</span>
-</button>`;
+<span class="sr-only" id="sr">Menu</span>
+</button>
+</div>
+`;
 
 // put the html into the dom
 hamburgerMenu.innerHTML = markup;
