@@ -245,7 +245,9 @@
 
   &:hover,
   &:focus {
-    color: $orangeColor;
+    background-color: $orangeColor;
+    padding: 0.2rem;
+    border-radius: 2px;
   }
 }
 
