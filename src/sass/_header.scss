@@ -61,8 +61,8 @@ a.skip-main:active {
   text-decoration: none;
   border: 4px solid transparent;
   outline: none;
-  margin: 0 0 0 0.8rem;
-  padding: 0.5rem 1rem;
+  // margin: 0 0 0 0.8rem;
+  // padding: 0.5rem 1rem;
   transition: 0.3s;
 
   &:hover,
@@ -94,6 +94,8 @@ a.skip-main:active {
       // text-shadow: 1px 1px 0 $blackColor;
       letter-spacing: 0.1rem;
       transition: none;
+      border-radius: initial;
+      // border: initial;
       // background-color: transparent;
       // border-radius: initial;
       // padding: 0;
