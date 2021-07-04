@@ -241,6 +241,7 @@
 .link {
   color: $blackColor;
   font-size: 1rem;
+  outline: initial;
 
   &:hover,
   &:focus {
